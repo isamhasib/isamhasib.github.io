@@ -20,6 +20,116 @@
 
     <!-- my css -->
     <style>
+      /* Compact Project Gallery Styles */
+      .project-image {
+        position: relative;
+        overflow: hidden;
+        height: 160px; /* Reduced from 200px */
+        background: #f8f9fa;
+      }
+
+      .project-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+      }
+
+      .project-image:hover img {
+        transform: scale(1.1);
+      }
+
+      .image-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(30, 58, 95, 0.8);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+
+      .project-image:hover .image-overlay {
+        opacity: 1;
+      }
+
+      .overlay-content {
+        text-align: center;
+        color: white;
+      }
+
+      .overlay-content i {
+        color: #81e6d9;
+        font-size: 1.5rem; /* Reduced from 2x */
+      }
+
+      .overlay-content p {
+        margin: 0;
+        font-weight: 600;
+        font-size: 0.9rem; /* Smaller text */
+      }
+
+      .tech-tags .badge {
+        margin-right: 5px;
+        font-size: 0.65rem; /* Smaller badges */
+        padding: 4px 8px;
+      }
+
+      .card {
+        border: none;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      .card-title {
+        color: #1e3a5f;
+        font-weight: 600;
+        font-size: 1.1rem; /* Slightly smaller title */
+      }
+
+      .card-text {
+        color: #666;
+        font-size: 0.85rem; /* Smaller text */
+        margin-bottom: 12px;
+      }
+
+      .btn-outline-primary {
+        border-color: #1e3a5f;
+        color: #1e3a5f;
+        font-size: 0.8rem; /* Smaller button text */
+        padding: 4px 10px;
+      }
+
+      .btn-outline-primary:hover {
+        background-color: #1e3a5f;
+        border-color: #1e3a5f;
+        color: white;
+      }
+
+      .underline {
+        width: 80px;
+        height: 3px;
+        background: linear-gradient(45deg, #1e3a5f, #38b2ac);
+        margin-bottom: 20px;
+      }
+
+      .display-5 {
+        color: #1e3a5f;
+      }
+
+      .lead {
+        color: #666;
+      }
+
       :root {
         --primary-color: #3498db;
         --secondary-color: #2c3e50;
@@ -257,6 +367,40 @@
           transform: rotate(360deg);
         }
       }
+
+      /* Compact project container */
+      .single-project-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 350px; /* Reduced height */
+      }
+
+      .single-project-card {
+        max-width: 380px; /* Reduced from 500px */
+        width: 100%;
+        margin: 0 auto;
+      }
+
+      /* Compact card body */
+      .card-body {
+        padding: 15px; /* Reduced padding */
+      }
+
+      /* Compact project section */
+      #projects .container {
+        max-width: 900px; /* Limit container width */
+      }
+
+      /* Compact project row */
+      #projects .row.justify-content-center {
+        margin-top: 1rem; /* Reduced margin */
+      }
+
+      /* Compact section padding */
+      #projects {
+        padding: 3rem 0 0; /* Reduced padding */
+      }
     </style>
 
     <title>Isam Hasib | Student & Programmer</title>
@@ -377,54 +521,29 @@
           <div class="col">
             <h2 class="display-5 fw-bold">My Projects</h2>
             <div class="underline mx-auto"></div>
-            <p class="lead">Here are some of my recent projects</p>
+            <p class="lead"></p>
           </div>
         </div>
         <div class="row justify-content-center">
-          <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
-            <div class="card h-100">
-              <div class="project-placeholder">
-                <i class="fas fa-code fa-3x mb-3"></i>
-                <p>Project Image</p>
-              </div>
-              <div class="card-body">
-                <h5 class="card-title">Kebangkitan Raja Iblis</h5>
-                <p class="card-text">Aplikasi web bertema fantasi yang mengeksplorasi penceritaan kreatif melalui elemen interaktif.</p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <small class="text-muted">HTML, CSS, JavaScript</small>
-                  <a href="#" class="btn btn-sm btn-outline-primary">View Details</a>
+          <div class="col-md-6 col-lg-4 single-project-container">
+            <div class="card h-100 single-project-card" data-aos="fade-up" data-aos-delay="200">
+              <div class="project-image">
+                <img src="img/images.jfif" alt="Batik Project" class="img-fluid" />
+                <div class="image-overlay">
+                  <div class="overlay-content">
+                    <i class="fas fa-palette fa-2x mb-2"></i>
+                    <p>Batik Collection</p>
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
-          <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
-            <div class="card h-100">
-              <div class="project-placeholder">
-                <i class="fas fa-gamepad fa-3x mb-3"></i>
-                <p>Project Image</p>
-              </div>
               <div class="card-body">
-                <h5 class="card-title">Isekai Adventure</h5>
-                <p class="card-text">Game cerita interaktif dengan beberapa akhir berdasarkan pilihan dan jalur pengguna.</p>
+                <h5 class="card-title">Web Batik</h5>
+                <p class="card-text">Disini tempat kami merilis Web batik.</p>
                 <div class="d-flex justify-content-between align-items-center">
-                  <small class="text-muted">JavaScript, Game Design</small>
-                  <a href="#" class="btn btn-sm btn-outline-primary">View Details</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
-            <div class="card h-100">
-              <div class="project-placeholder">
-                <i class="fas fa-globe fa-3x mb-3"></i>
-                <p>Project Image</p>
-              </div>
-              <div class="card-body">
-                <h5 class="card-title">World War III Simulation</h5>
-                <p class="card-text">Simulasi geopolitik yang mengeksplorasi skenario potensial dan hasil konflik global.</p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <small class="text-muted">Data Visualization, JavaScript</small>
-                  <a href="#" class="btn btn-sm btn-outline-primary">View Details</a>
+                  <div class="tech-tags">
+                    <span class="badge bg-primary">HTML5</span>
+                  </div>
+                  <a href="index1.html" class="btn btn-sm btn-outline-primary">View Details</a>
                 </div>
               </div>
             </div>
