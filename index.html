@@ -24,7 +24,7 @@
       .project-image {
         position: relative;
         overflow: hidden;
-        height: 160px; /* Reduced from 200px */
+        height: 160px;
         background: #f8f9fa;
       }
 
@@ -64,18 +64,18 @@
 
       .overlay-content i {
         color: #81e6d9;
-        font-size: 1.5rem; /* Reduced from 2x */
+        font-size: 1.5rem;
       }
 
       .overlay-content p {
         margin: 0;
         font-weight: 600;
-        font-size: 0.9rem; /* Smaller text */
+        font-size: 0.9rem;
       }
 
       .tech-tags .badge {
         margin-right: 5px;
-        font-size: 0.65rem; /* Smaller badges */
+        font-size: 0.65rem;
         padding: 4px 8px;
       }
 
@@ -93,19 +93,19 @@
       .card-title {
         color: #1e3a5f;
         font-weight: 600;
-        font-size: 1.1rem; /* Slightly smaller title */
+        font-size: 1.1rem;
       }
 
       .card-text {
         color: #666;
-        font-size: 0.85rem; /* Smaller text */
+        font-size: 0.85rem;
         margin-bottom: 12px;
       }
 
       .btn-outline-primary {
         border-color: #1e3a5f;
         color: #1e3a5f;
-        font-size: 0.8rem; /* Smaller button text */
+        font-size: 0.8rem;
         padding: 4px 10px;
       }
 
@@ -115,29 +115,28 @@
         color: white;
       }
 
-      .underline {
-        width: 80px;
-        height: 3px;
-        background: linear-gradient(45deg, #1e3a5f, #38b2ac);
-        margin-bottom: 20px;
+      /* Responsive grid layout */
+      #projects .row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
       }
 
-      .display-5 {
-        color: #1e3a5f;
+      #projects .col-md-6 {
+        flex: 1 1 calc(50% - 20px);
+        min-width: 300px;
       }
 
-      .lead {
-        color: #666;
+      #projects .col-lg-4 {
+        flex: 1 1 calc(33.333% - 20px);
+        min-width: 280px;
       }
 
-      :root {
-        --primary-color: #3498db;
-        --secondary-color: #2c3e50;
-        --accent-color: #e74c3c;
-        --light-color: #ecf0f1;
-        --dark-color: #2c3e50;
-        --text-color: #333;
-        --bg-color: #fff;
+      @media (max-width: 768px) {
+        #projects .col-md-6,
+        #projects .col-lg-4 {
+          flex: 1 1 100%;
+        }
       }
 
       /* Theme 1 - Default (Blue) */
@@ -525,8 +524,9 @@
           </div>
         </div>
         <div class="row justify-content-center">
-          <div class="col-md-6 col-lg-4 single-project-container">
-            <div class="card h-100 single-project-card" data-aos="fade-up" data-aos-delay="200">
+          <!-- Project 1 - Web Batik -->
+          <div class="col-md-6 col-lg-4 mb-4">
+            <div class="card h-100" data-aos="fade-up" data-aos-delay="200">
               <div class="project-image">
                 <img src="img/images.jfif" alt="Batik Project" class="img-fluid" />
                 <div class="image-overlay">
@@ -544,6 +544,31 @@
                     <span class="badge bg-primary">HTML5</span>
                   </div>
                   <a href="index1.html" class="btn btn-sm btn-outline-primary">View Details</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2 - Web Joki -->
+          <div class="col-md-6 col-lg-4 mb-4">
+            <div class="card h-100" data-aos="fade-up" data-aos-delay="400">
+              <div class="project-image">
+                <img src="img/download (7).jfif" alt="Joki Project" class="img-fluid" />
+                <div class="image-overlay">
+                  <div class="overlay-content">
+                    <i class="fas fa-gamepad fa-2x mb-2"></i>
+                    <p>Game Boosting</p>
+                  </div>
+                </div>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Web Joki</h5>
+                <p class="card-text">Disini tempat kami merilis Web Joki.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="tech-tags">
+                    <span class="badge bg-primary">HTML5</span>
+                  </div>
+                  <a href="index3.html" class="btn btn-sm btn-outline-primary">View Details</a>
                 </div>
               </div>
             </div>
