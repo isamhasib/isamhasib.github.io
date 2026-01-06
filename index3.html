@@ -60,6 +60,7 @@
         align-items: center;
         gap: 0.5rem;
         transition: transform 0.3s ease;
+        text-decoration: none;
       }
 
       .logo:hover {
@@ -70,6 +71,58 @@
         display: flex;
         align-items: center;
         gap: 1.5rem;
+      }
+
+      /* TOMBOL KEMBALI KE BERANDA */
+      .back-to-home {
+        padding: 0.5rem 1.5rem;
+        background: transparent;
+        color: var(--primary);
+        border: 2px solid var(--primary);
+        border-radius: 50px;
+        cursor: pointer;
+        font-weight: 600;
+        transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        text-decoration: none;
+        font-size: 0.95rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .back-to-home:hover {
+        background: var(--primary);
+        color: white;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 15px rgba(62, 121, 139, 0.3);
+      }
+
+      .back-to-home i {
+        font-size: 1rem;
+      }
+
+      /* Responsif untuk tombol kembali */
+      @media (max-width: 900px) {
+        .back-to-home {
+          padding: 0.4rem 1rem;
+          font-size: 0.85rem;
+        }
+      }
+
+      @media (max-width: 600px) {
+        .back-to-home {
+          padding: 0.3rem 0.8rem;
+          font-size: 0.8rem;
+        }
+
+        .back-to-home span {
+          display: none; /* Sembunyikan teks pada mobile */
+        }
+
+        .back-to-home i {
+          font-size: 1rem;
+          margin-right: 0;
+        }
       }
 
       .dropdown {
@@ -952,6 +1005,7 @@
           margin-top: 1rem;
           justify-content: center;
           width: 100%;
+          flex-wrap: wrap;
         }
 
         .logo {
@@ -1098,7 +1152,7 @@
   </head>
   <body>
     <header>
-      <div class="logo">LetsLearn</div>
+      <a href="index.html" class="logo">LetsLearn</a>
       <div class="nav-right">
         <div class="dropdown">
           <a class="nav-item">Materi ▼</a>
@@ -1118,6 +1172,12 @@
             <a href="tim-kami.html">Tim Kami</a>
           </div>
         </div>
+
+        <!-- TOMBOL KEMBALI KE BERANDA -->
+        <a href="index.html" class="back-to-home">
+          <i class="fas fa-home"></i>
+          <span>Kembali ke Beranda</span>
+        </a>
       </div>
     </header>
 
