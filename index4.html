@@ -93,6 +93,7 @@
       .nav-links-main {
         display: flex;
         gap: 1.5rem;
+        align-items: center;
       }
 
       .nav-links-main a {
@@ -108,6 +109,31 @@
       .nav-links-main a:hover {
         color: white;
         border-bottom-color: var(--dkv-primary);
+      }
+
+      /* Tombol kembali ke beranda */
+      .btn-back-home {
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(8px);
+        color: white;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        padding: 8px 18px;
+        border-radius: 40px;
+        font-weight: 600;
+        font-size: 0.85rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin-left: 10px;
+      }
+
+      .btn-back-home:hover {
+        background: var(--dkv-primary);
+        border-color: var(--dkv-primary);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
       }
 
       /* hero utama */
@@ -538,6 +564,13 @@
           flex-direction: column;
           align-items: center;
         }
+        .nav-links-main {
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+        .btn-back-home {
+          margin-left: 0;
+        }
       }
     </style>
   </head>
@@ -557,6 +590,8 @@
         <a href="#jurusan">Jurusan</a>
         <a href="#tentang">Tentang Sekolah</a>
         <a href="#kontak">Kontak</a>
+        <!-- Tombol kembali ke index.html -->
+        <button class="btn-back-home" onclick="window.location.href = 'index.html'"><i class="ti ti-arrow-left"></i> Kembali ke Beranda</button>
       </div>
     </nav>
 
@@ -621,7 +656,7 @@
           <div class="desc-card">TJKT (d/h TKJ) fokus pada instalasi jaringan, administrasi server, keamanan siber, fiber optik, dan konfigurasi perangkat telekomunikasi. Berkolaborasi dengan PT. PLN Icon Plus.</div>
           <div class="card-stats">
             <div class="stat-mini-card"><i class="ti ti-certificate"></i><span>Kelas Industri</span></div>
-            <button class="btn-explore" onclick="window.location.href = 'tkjt.html'">Eksplor TJKT <i class="ti ti-arrow-right"></i></button>
+            <button class="btn-explore" onclick="window.location.href = 'tjkt.html'">Eksplor TJKT <i class="ti ti-arrow-right"></i></button>
           </div>
         </div>
       </div>
@@ -687,7 +722,6 @@
       </div>
       <div class="footer-copyright">© 2025 SMKN 5 Malang – Jurusan DKV & TJKT | Membangun Generasi Kreatif & Kompeten</div>
     </footer>
-
     <script>
       document.querySelectorAll(".nav-links-main a").forEach((anchor) => {
         anchor.addEventListener("click", function (e) {
