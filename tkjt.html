@@ -1,0 +1,1198 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TJKT SMKN 5 Malang - Profil Jurusan</title>
+    <!-- Font Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      :root {
+        --blue-50: #e6f1fb;
+        --blue-100: #b5d4f4;
+        --blue-200: #85b7eb;
+        --blue-400: #378add;
+        --blue-600: #185fa5;
+        --blue-800: #0c447c;
+        --blue-900: #042c53;
+        --gray-50: #f1efe8;
+        --gray-100: #d3d1c7;
+        --gray-200: #b4b2a9;
+        --gray-400: #888780;
+        --gray-600: #5f5e5a;
+        --gray-800: #444441;
+        --gray-900: #2c2c2a;
+      }
+      body {
+        font-family:
+          "Inter",
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          Helvetica,
+          Arial,
+          sans-serif;
+        background: #f4f8fd;
+        color: #1a2332;
+        overflow-x: hidden;
+      }
+
+      nav {
+        background: #042c53;
+        padding: 0 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 64px;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        border-bottom: 2px solid #185fa5;
+        flex-wrap: wrap;
+      }
+      .nav-brand {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: #fff;
+        font-family: "Inter", sans-serif;
+        font-size: 1.2rem;
+        font-weight: 800;
+        letter-spacing: -0.2px;
+      }
+      .nav-brand .badge {
+        background: #378add;
+        color: #fff;
+        font-size: 11px;
+        font-family: "Inter", sans-serif;
+        font-weight: 700;
+        padding: 3px 8px;
+        border-radius: 4px;
+      }
+      .nav-links {
+        display: flex;
+        gap: 6px;
+        flex-wrap: wrap;
+      }
+      .nav-links a {
+        color: #b5d4f4;
+        text-decoration: none;
+        font-size: 13px;
+        font-weight: 500;
+        padding: 6px 12px;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: all 0.2s;
+      }
+      .nav-links a:hover,
+      .nav-links a.active {
+        background: #185fa5;
+        color: #fff;
+      }
+
+      .hero {
+        background: linear-gradient(135deg, #042c53 0%, #0c447c 50%, #185fa5 100%);
+        padding: 5rem 2rem 4rem;
+        position: relative;
+        overflow: hidden;
+      }
+      .hero::before {
+        content: "";
+        position: absolute;
+        top: -60px;
+        right: -60px;
+        width: 320px;
+        height: 320px;
+        border-radius: 50%;
+        background: rgba(55, 138, 221, 0.12);
+        pointer-events: none;
+      }
+      .hero::after {
+        content: "";
+        position: absolute;
+        bottom: -40px;
+        left: 10%;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background: rgba(181, 212, 244, 0.07);
+        pointer-events: none;
+      }
+      .hero-inner {
+        max-width: 860px;
+        margin: 0 auto;
+        position: relative;
+        z-index: 1;
+      }
+      .hero-eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: rgba(55, 138, 221, 0.25);
+        border: 1px solid rgba(133, 183, 235, 0.3);
+        color: #85b7eb;
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        padding: 6px 14px;
+        border-radius: 20px;
+        margin-bottom: 1.5rem;
+      }
+      .hero h1 {
+        font-family: "Inter", sans-serif;
+        font-size: clamp(2rem, 5vw, 3.2rem);
+        font-weight: 800;
+        color: #fff;
+        line-height: 1.1;
+        margin-bottom: 1rem;
+        letter-spacing: -0.02em;
+      }
+      .hero h1 span {
+        color: #378add;
+      }
+      .hero p {
+        color: #b5d4f4;
+        font-size: 1.05rem;
+        line-height: 1.7;
+        max-width: 560px;
+        margin-bottom: 2rem;
+      }
+      .hero-stats {
+        display: flex;
+        gap: 2rem;
+        flex-wrap: wrap;
+      }
+      .hero-stat {
+        text-align: left;
+      }
+      .hero-stat .num {
+        font-family: "Inter", sans-serif;
+        font-size: 2rem;
+        font-weight: 800;
+        color: #fff;
+        letter-spacing: -0.01em;
+      }
+      .hero-stat .lbl {
+        font-size: 12px;
+        color: #85b7eb;
+        font-weight: 500;
+      }
+
+      .section {
+        padding: 3.5rem 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      .section-header {
+        margin-bottom: 2rem;
+      }
+      .section-eyebrow {
+        display: inline-block;
+        background: #e6f1fb;
+        color: #185fa5;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        padding: 4px 12px;
+        border-radius: 4px;
+        margin-bottom: 0.6rem;
+      }
+      .section-header h2 {
+        font-family: "Inter", sans-serif;
+        font-size: 1.7rem;
+        font-weight: 800;
+        color: #042c53;
+        line-height: 1.2;
+        letter-spacing: -0.01em;
+      }
+      .divider {
+        width: 48px;
+        height: 4px;
+        background: #378add;
+        border-radius: 2px;
+        margin-top: 0.6rem;
+      }
+
+      .card {
+        background: #fff;
+        border: 1px solid #dde8f5;
+        border-radius: 14px;
+        padding: 1.5rem;
+        transition:
+          box-shadow 0.2s,
+          transform 0.2s;
+      }
+      .card:hover {
+        box-shadow: 0 8px 32px rgba(24, 95, 165, 0.1);
+        transform: translateY(-2px);
+      }
+
+      .profile-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+      }
+      .profile-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+        background: #fff;
+        border: 1px solid #dde8f5;
+        border-radius: 12px;
+        padding: 1.25rem;
+      }
+      .profile-icon {
+        width: 40px;
+        height: 40px;
+        background: #e6f1fb;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        color: #185fa5;
+        font-size: 20px;
+      }
+      .profile-item h3 {
+        font-size: 12px;
+        color: #888780;
+        font-weight: 600;
+        letter-spacing: 0.3px;
+        text-transform: uppercase;
+        margin-bottom: 3px;
+      }
+      .profile-item p {
+        font-size: 14px;
+        color: #042c53;
+        font-weight: 600;
+        line-height: 1.4;
+      }
+
+      .sejarah-box {
+        background: #fff;
+        border: 1px solid #dde8f5;
+        border-radius: 14px;
+        padding: 2rem;
+        position: relative;
+        overflow: hidden;
+      }
+      .sejarah-box::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 4px;
+        background: linear-gradient(180deg, #378add, #042c53);
+      }
+      .sejarah-box p {
+        color: #444441;
+        font-size: 0.95rem;
+        line-height: 1.8;
+        margin-bottom: 1rem;
+      }
+      .sejarah-box p:last-child {
+        margin-bottom: 0;
+      }
+
+      .timeline {
+        margin-top: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+      }
+      .tl-item {
+        display: flex;
+        gap: 16px;
+        position: relative;
+      }
+      .tl-item:not(:last-child)::after {
+        content: "";
+        position: absolute;
+        left: 19px;
+        top: 32px;
+        width: 2px;
+        height: calc(100% - 12px);
+        background: #dde8f5;
+      }
+      .tl-dot {
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        background: #e6f1fb;
+        border: 2px solid #378add;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        z-index: 1;
+        font-size: 11px;
+        font-weight: 700;
+        color: #185fa5;
+      }
+      .tl-content {
+        padding-bottom: 1.5rem;
+      }
+      .tl-content .year {
+        font-size: 12px;
+        font-weight: 700;
+        color: #378add;
+        letter-spacing: 0.3px;
+      }
+      .tl-content .desc {
+        font-size: 14px;
+        color: #444441;
+        margin-top: 2px;
+        line-height: 1.5;
+      }
+
+      /* Guru Grid - rapi ke samping (horizontal) */
+      .guru-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 1.5rem;
+        margin-bottom: 1.5rem;
+      }
+      .guru-card {
+        background: #fff;
+        border: 1px solid #dde8f5;
+        border-radius: 20px;
+        padding: 1.5rem;
+        text-align: center;
+        transition: all 0.2s;
+      }
+      .guru-card:hover {
+        border-color: #378add;
+        box-shadow: 0 8px 24px rgba(55, 138, 221, 0.12);
+        transform: translateY(-4px);
+      }
+      .guru-avatar {
+        width: 110px;
+        height: 110px;
+        border-radius: 50%;
+        margin: 0 auto 12px;
+        overflow: hidden;
+        background: #f0f4fa;
+        border: 2px solid #378add;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .guru-avatar img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .guru-avatar .foto-placeholder {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: #185fa5;
+        width: 100%;
+        height: 100%;
+      }
+      .guru-avatar .foto-placeholder i {
+        font-size: 36px;
+        margin-bottom: 4px;
+      }
+      .guru-avatar .foto-placeholder span {
+        font-size: 9px;
+        background: #e6f1fb;
+        padding: 2px 6px;
+        border-radius: 12px;
+      }
+      .guru-card h3 {
+        font-size: 14px;
+        font-weight: 700;
+        color: #042c53;
+        margin-bottom: 4px;
+        line-height: 1.3;
+      }
+      .guru-card .mapel {
+        font-size: 11px;
+        color: #185fa5;
+        font-weight: 600;
+        background: #e6f1fb;
+        padding: 3px 10px;
+        border-radius: 20px;
+        display: inline-block;
+        margin-bottom: 6px;
+        text-transform: uppercase;
+      }
+      .guru-card .jabatan {
+        font-size: 11px;
+        color: #888780;
+      }
+
+      /* Galeri kegiatan */
+      .galeri-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 1.5rem;
+        margin-bottom: 2rem;
+      }
+      .galeri-card {
+        background: #fff;
+        border: 1px solid #dde8f5;
+        border-radius: 20px;
+        overflow: hidden;
+        transition: all 0.2s;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+      }
+      .galeri-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 16px 28px rgba(24, 95, 165, 0.12);
+        border-color: #85b7eb;
+      }
+      .galeri-preview {
+        min-height: 180px;
+        background: #f0f4fa;
+        border-bottom: 1px solid #dde8f5;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+      .galeri-preview .foto-placeholder {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+        color: #185fa5;
+      }
+      .galeri-preview .foto-placeholder i {
+        font-size: 48px;
+        margin-bottom: 8px;
+        opacity: 0.6;
+      }
+      .galeri-preview .foto-placeholder span {
+        font-size: 11px;
+        font-weight: 500;
+        background: #e6f1fb;
+        padding: 4px 12px;
+        border-radius: 20px;
+      }
+      .galeri-preview img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+        display: block;
+      }
+      .galeri-info {
+        padding: 1rem;
+      }
+      .galeri-tag {
+        display: inline-block;
+        background: #e6f1fb;
+        color: #185fa5;
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        padding: 4px 10px;
+        border-radius: 20px;
+        margin-bottom: 10px;
+      }
+      .galeri-desc {
+        font-size: 13px;
+        color: #444441;
+        font-weight: 500;
+        line-height: 1.4;
+      }
+
+      .prestasi-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 1rem;
+        background: #fff;
+        border: 1px solid #dde8f5;
+        border-radius: 14px;
+        padding: 1.2rem;
+        margin-bottom: 1rem;
+      }
+      .prestasi-icon {
+        width: 48px;
+        height: 48px;
+        background: #042c53;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+      }
+      .prestasi-icon i {
+        font-size: 24px;
+        color: #378add;
+      }
+
+      .visi-misi {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+      }
+      .vm-card {
+        background: #fff;
+        border: 1px solid #dde8f5;
+        border-radius: 14px;
+        padding: 1.5rem;
+      }
+      .vm-card.visi {
+        border-top: 3px solid #378add;
+      }
+      .vm-card.misi {
+        border-top: 3px solid #042c53;
+      }
+      .vm-card h3 {
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        margin-bottom: 0.8rem;
+      }
+      .vm-card.visi h3 {
+        color: #378add;
+      }
+      .vm-card.misi h3 {
+        color: #042c53;
+      }
+      .vm-card p {
+        font-size: 14px;
+        color: #444441;
+        line-height: 1.7;
+      }
+      .misi-list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+      .misi-list li {
+        display: flex;
+        gap: 8px;
+        font-size: 14px;
+        color: #444441;
+        line-height: 1.5;
+      }
+      .misi-list li::before {
+        content: "";
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: #378add;
+        margin-top: 7px;
+        flex-shrink: 0;
+      }
+
+      .kompetensi-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+      }
+      .komp-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+        background: #fff;
+        border: 1px solid #dde8f5;
+        border-radius: 12px;
+        padding: 1.2rem;
+      }
+      .komp-num {
+        width: 32px;
+        height: 32px;
+        background: #042c53;
+        color: #fff;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 13px;
+        font-weight: 700;
+        flex-shrink: 0;
+      }
+      .komp-item p {
+        font-size: 14px;
+        color: #1a2332;
+        font-weight: 500;
+        line-height: 1.4;
+      }
+
+      footer {
+        background: #042c53;
+        color: #b5d4f4;
+        padding: 2rem 2rem 1.5rem;
+        border-top: 2px solid #185fa5;
+        font-size: 13px;
+      }
+      .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 2rem;
+        margin-bottom: 2rem;
+      }
+      .footer-brand {
+        flex: 1;
+        min-width: 180px;
+      }
+      .footer-brand h3 {
+        font-family: "Inter", sans-serif;
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: white;
+        margin-bottom: 0.5rem;
+      }
+      .footer-contact {
+        flex: 1.2;
+        min-width: 220px;
+      }
+      .footer-contact h4,
+      .footer-social h4 {
+        font-size: 0.8rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: #85b7eb;
+        margin-bottom: 1rem;
+      }
+      .contact-list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 0.7rem;
+      }
+      .contact-list li {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 13px;
+        color: #d3d1c7;
+      }
+      .contact-list li i {
+        font-size: 18px;
+        color: #378add;
+        width: 24px;
+      }
+      .contact-list li a {
+        color: #d3d1c7;
+        text-decoration: none;
+      }
+      .contact-list li a:hover {
+        color: white;
+      }
+      .footer-social {
+        flex: 0.8;
+        min-width: 150px;
+      }
+      .social-icons {
+        display: flex;
+        gap: 1rem;
+        margin-top: 0.5rem;
+      }
+      .social-icons a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 34px;
+        height: 34px;
+        background: rgba(55, 138, 221, 0.2);
+        border-radius: 40px;
+        color: #b5d4f4;
+        font-size: 18px;
+        transition: all 0.2s;
+        text-decoration: none;
+      }
+      .social-icons a:hover {
+        background: #378add;
+        color: white;
+        transform: translateY(-2px);
+      }
+      .footer-copyright {
+        text-align: center;
+        padding-top: 1.5rem;
+        border-top: 1px solid rgba(133, 183, 235, 0.2);
+        font-size: 11px;
+        color: #85b7eb;
+      }
+      .footer-copyright strong {
+        color: white;
+      }
+
+      .page {
+        display: none;
+      }
+      .page.active {
+        display: block;
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(12px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .page.active .section {
+        animation: fadeIn 0.35s ease;
+      }
+
+      .back-home {
+        position: fixed;
+        bottom: 24px;
+        right: 24px;
+        background: #042c53;
+        color: white;
+        padding: 12px 18px;
+        border-radius: 40px;
+        text-decoration: none;
+        font-size: 13px;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        transition: all 0.2s;
+        z-index: 99;
+        border: 1px solid #378add;
+      }
+      .back-home:hover {
+        background: #378add;
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(55, 138, 221, 0.3);
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="nav-brand">
+        <i class="ti ti-device-desktop" style="font-size: 22px; color: #378add"></i>
+        TJKT
+        <span class="badge">SMKN 5 MALANG</span>
+      </div>
+      <div class="nav-links">
+        <a class="active" onclick="showPage('profil', this)">Profil</a>
+        <a onclick="showPage('sejarah', this)">Sejarah</a>
+        <a onclick="showPage('guru', this)">Guru</a>
+        <a onclick="showPage('dokumentasi', this)">Dokumentasi</a>
+      </div>
+    </nav>
+
+    <div id="profil" class="page active">
+      <div class="hero">
+        <div class="hero-inner">
+          <div class="hero-eyebrow"><i class="ti ti-wifi"></i> Jurusan Unggulan</div>
+          <h1>Teknik Jaringan<br />Komputer & <span>Telekomunikasi</span></h1>
+          <p>Mencetak tenaga ahli jaringan komputer dan telekomunikasi yang kompeten, berkarakter, dan siap bersaing di era digital global.</p>
+          <div class="hero-stats">
+            <div class="hero-stat">
+              <div class="num">3</div>
+              <div class="lbl">Tahun Program</div>
+            </div>
+            <div class="hero-stat">
+              <div class="num">8</div>
+              <div class="lbl">Tenaga Pengajar</div>
+            </div>
+            <div class="hero-stat">
+              <div class="num">A</div>
+              <div class="lbl">Akreditasi</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div class="section-header">
+          <span class="section-eyebrow">Profil Jurusan</span>
+          <h2>Tentang TJKT</h2>
+          <div class="divider"></div>
+        </div>
+        <div class="card" style="margin-bottom: 1.5rem">
+          <p style="color: #444441; font-size: 0.95rem; line-height: 1.8">
+            Jurusan <strong>Teknik Jaringan Komputer dan Telekomunikasi (TJKT)</strong> (sebelumnya Teknik Komputer dan Jaringan / TKJ) adalah program keahlian yang berfokus pada instalasi, konfigurasi, administrasi server, serta
+            pemeliharaan jaringan komputer dan telekomunikasi. Program ini mempersiapkan peserta didik menjadi tenaga ahli yang mampu mengelola infrastruktur TI.
+          </p>
+        </div>
+        <div class="profile-grid">
+          <div class="profile-item">
+            <div class="profile-icon"><i class="ti ti-school"></i></div>
+            <div>
+              <h3>Nama Jurusan</h3>
+              <p>TJKT (d/h TKJ)</p>
+            </div>
+          </div>
+          <div class="profile-item">
+            <div class="profile-icon"><i class="ti ti-building"></i></div>
+            <div>
+              <h3>Sekolah</h3>
+              <p>SMKN 5 Malang (VOHISMA)</p>
+            </div>
+          </div>
+          <div class="profile-item">
+            <div class="profile-icon"><i class="ti ti-calendar"></i></div>
+            <div>
+              <h3>Jenjang</h3>
+              <p>SMK – 3 Tahun</p>
+            </div>
+          </div>
+          <div class="profile-item">
+            <div class="profile-icon"><i class="ti ti-certificate"></i></div>
+            <div>
+              <h3>Akreditasi Sekolah</h3>
+              <p>A (Unggul) - SK No. 1214/BAN-SM/SK/2018</p>
+            </div>
+          </div>
+          <div class="profile-item">
+            <div class="profile-icon"><i class="ti ti-users"></i></div>
+            <div>
+              <h3>Kepala Sekolah</h3>
+              <p>Slamet Winarto M.Pd</p>
+            </div>
+          </div>
+          <div class="profile-item">
+            <div class="profile-icon"><i class="ti ti-map-pin"></i></div>
+            <div>
+              <h3>Lokasi</h3>
+              <p>Jl. Ikan Piranha No.50, Malang</p>
+            </div>
+          </div>
+        </div>
+        <div style="margin-top: 2rem">
+          <div class="section-header">
+            <span class="section-eyebrow">Visi & Misi</span>
+            <h2>Landasan Jurusan</h2>
+            <div class="divider"></div>
+          </div>
+          <div class="visi-misi">
+            <div class="vm-card visi">
+              <h3>Visi</h3>
+              <p>Menjadi jurusan TJKT yang unggul dalam menghasilkan lulusan profesional, berdaya saing tinggi, dan berkarakter mulia di bidang teknologi jaringan.</p>
+            </div>
+            <div class="vm-card misi">
+              <h3>Misi</h3>
+              <ul class="misi-list">
+                <li>Pembelajaran berbasis industri dan proyek nyata (Teaching Factory)</li>
+                <li>Mengembangkan kompetensi teknis dan soft skill siswa secara terpadu</li>
+                <li>Kemitraan strategis dengan dunia industri (PLN Icon Plus)</li>
+                <li>Menanamkan karakter disiplin, inovatif, dan profesional</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div style="margin-top: 2rem">
+          <div class="section-header">
+            <span class="section-eyebrow">Kompetensi</span>
+            <h2>Yang Akan Dipelajari</h2>
+            <div class="divider"></div>
+          </div>
+          <div class="kompetensi-grid">
+            <div class="komp-item">
+              <div class="komp-num">01</div>
+              <p>Instalasi & Konfigurasi Jaringan LAN/WAN</p>
+            </div>
+            <div class="komp-item">
+              <div class="komp-num">02</div>
+              <p>Administrasi Server Linux & Windows</p>
+            </div>
+            <div class="komp-item">
+              <div class="komp-num">03</div>
+              <p>Keamanan Jaringan & Cyber Security</p>
+            </div>
+            <div class="komp-item">
+              <div class="komp-num">04</div>
+              <p>Troubleshooting Hardware & Jaringan</p>
+            </div>
+            <div class="komp-item">
+              <div class="komp-num">05</div>
+              <p>Routing & Switching (Cisco Packet Tracer)</p>
+            </div>
+            <div class="komp-item">
+              <div class="komp-num">06</div>
+              <p>Telekomunikasi & Fiber Optik</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="sejarah" class="page">
+      <div class="hero" style="padding: 3rem 2rem">
+        <div class="hero-inner">
+          <div class="hero-eyebrow"><i class="ti ti-history"></i> Perjalanan Kami</div>
+          <h1>Sejarah <span>SMKN 5 Malang & TJKT</span></h1>
+          <p>Lebih dari seperempat abad mengukir prestasi di bidang teknologi dan industri kreatif.</p>
+        </div>
+      </div>
+      <div class="section">
+        <div class="sejarah-box">
+          <p>
+            <strong>SMK Negeri 5 Malang</strong> (dikenal dengan sebutan VOHISMA) didirikan pada tanggal <strong>29 Januari 1998</strong> berdasarkan SK Pendirian No. 13a/O/1998. Sekolah ini berlokasi di Jalan Ikan Piranha Atas, Kelurahan
+            Tunjungsekar, Kecamatan Lowokwaru, Kota Malang, di atas tanah seluas 13.816 m².
+          </p>
+          <p>
+            Awalnya SMKN 5 Malang memiliki keunggulan di bidang industri kreatif, dengan jurusan unggulan Kriya Kayu, Kriya Keramik (satu-satunya di Kota Malang), Kriya Tekstil, dan Busana Butik. Seiring perkembangan teknologi informasi,
+            pada awal tahun 2000-an sekolah ini membuka jurusan <strong>Teknik Komputer dan Jaringan (TKJ)</strong> serta Rekayasa Perangkat Lunak (RPL) untuk menjawab kebutuhan industri digital.
+          </p>
+          <p>
+            Pada tahun <strong>2025</strong>, jurusan TKJ resmi bertransformasi menjadi <strong>Teknik Jaringan Komputer dan Telekomunikasi (TJKT)</strong> sejalan dengan kurikulum Merdeka Belajar dan kebutuhan dunia kerja. Di tahun yang
+            sama, jurusan TJKT meresmikan <strong>Kelas Industri</strong> bekerja sama dengan <strong>PT. PLN Icon Plus</strong> untuk memperkuat keterampilan siswa di bidang jaringan dan telekomunikasi. Hingga kini SMKN 5 Malang telah
+            terakreditasi A (Unggul) berdasarkan SK No. 1214/BAN-SM/SK/2018.
+          </p>
+        </div>
+        <div class="section-header">
+          <span class="section-eyebrow">Linimasa</span>
+          <h2>Tonggak Sejarah</h2>
+          <div class="divider"></div>
+        </div>
+        <div class="timeline">
+          <div class="tl-item">
+            <div class="tl-dot">1998</div>
+            <div class="tl-content">
+              <div class="year">29 Januari 1998 — Pendirian SMKN 5 Malang</div>
+              <div class="desc">SMK Negeri 5 Malang resmi didirikan dengan jurusan Kriya Kayu, Kriya Keramik, Kriya Tekstil, dan Busana Butik.</div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot">2000</div>
+            <div class="tl-content">
+              <div class="year">2000-an — Pembukaan Jurusan TKJ</div>
+              <div class="desc">Jurusan Teknik Komputer dan Jaringan (TKJ) dibuka sebagai respons terhadap pesatnya teknologi informasi.</div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot">2018</div>
+            <div class="tl-content">
+              <div class="year">2018 — Akreditasi A (Unggul)</div>
+              <div class="desc">SMKN 5 Malang meraih akreditasi A (Unggul) dari BAN-SM serta sertifikasi ISO 9001:2008.</div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot">2025</div>
+            <div class="tl-content">
+              <div class="year">2025 — Rebranding menjadi TJKT & Kelas Industri</div>
+              <div class="desc">Jurusan TKJ bertransformasi menjadi Teknik Jaringan Komputer dan Telekomunikasi (TJKT). Peresmian Kelas Industri bersama PT. PLN Icon Plus.</div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot">2025</div>
+            <div class="tl-content">
+              <div class="year">2025 — Lolos LKS Provinsi Jatim</div>
+              <div class="desc">Roslan, siswa TJKT kelas XII, berhasil mewakili Kota Malang di ajang Lomba Kompetensi Siswa (LKS) Provinsi Jawa Timur bidang Information Network Cabling.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="guru" class="page">
+      <div class="hero" style="padding: 3rem 2rem">
+        <div class="hero-inner">
+          <div class="hero-eyebrow"><i class="ti ti-users"></i> Tim Pengajar</div>
+          <h1>Guru & <span>Staf TJKT</span></h1>
+          <p>Tenaga pendidik profesional dan bersertifikat di bidang jaringan & telekomunikasi.</p>
+        </div>
+      </div>
+      <div class="section">
+        <div class="section-header">
+          <span class="section-eyebrow">Struktur</span>
+          <h2>Kepala Jurusan</h2>
+          <div class="divider"></div>
+        </div>
+        <div class="guru-grid" style="grid-template-columns: repeat(auto-fill, minmax(260px, 1fr))">
+          <div class="guru-card">
+            <div class="guru-avatar"><img src="img/ina.jpg" alt="Foto Kepala Jurusan" onerror="this.src = 'https://placehold.co/110x110?text=No+Image'" /></div>
+            <h3>Erlitawanty M.Pd.</h3>
+            <span class="mapel">Kepala Jurusan TJKT</span>
+          </div>
+        </div>
+
+        <div class="section-header">
+          <span class="section-eyebrow">Pengajar</span>
+          <h2>Daftar Guru TJKT</h2>
+          <div class="divider"></div>
+        </div>
+        <div class="guru-grid">
+          <div class="guru-card">
+            <div class="guru-avatar"><img src="img/arisby.jpg" alt="Foto Ari Subagyo" onerror="this.src = 'https://placehold.co/110x110?text=No+Image'" /></div>
+            <h3>Ari Subagyo S.Kom.</h3>
+            <span class="mapel">Pengajar TKJ</span>
+          </div>
+          <div class="guru-card">
+            <div class="guru-avatar"><img src="img/basith.jpg" alt="Foto Abdul Basith" onerror="this.src = 'https://placehold.co/110x110?text=No+Image'" /></div>
+            <h3>Abdul Basith Panatagama Sujarwo Putra M.Pd.</h3>
+            <span class="mapel">Pengajar TKJ</span>
+          </div>
+          <div class="guru-card">
+            <div class="guru-avatar"><img src="img/bayu.jpg" alt="Foto Bayu Andi" onerror="this.src = 'https://placehold.co/110x110?text=No+Image'" /></div>
+            <h3>Bayu Andi Sulistiya S.Pd.</h3>
+            <span class="mapel">Pengajar TKJ</span>
+          </div>
+          <div class="guru-card">
+            <div class="guru-avatar"><img src="img/rustika.jpg" alt="Foto Rustika" onerror="this.src = 'https://placehold.co/110x110?text=No+Image'" /></div>
+            <h3>Rustika Christiantari S.Pd.</h3>
+            <span class="mapel">Pengajar TKJ</span>
+          </div>
+          <div class="guru-card">
+            <div class="guru-avatar"><img src="img/soepardi.jpg" alt="Foto Soepardi" onerror="this.src = 'https://placehold.co/110x110?text=No+Image'" /></div>
+            <h3>Soepardi S.Pd.</h3>
+            <span class="mapel">Pengajar TKJ</span>
+          </div>
+          <div class="guru-card">
+            <div class="guru-avatar"><img src="img/winarto.jpg" alt="Foto Winarto" onerror="this.src = 'https://placehold.co/110x110?text=No+Image'" /></div>
+            <h3>Winarto S.Pd. M.T.</h3>
+            <span class="mapel">Pengajar TKJ</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="dokumentasi" class="page">
+      <div class="hero" style="padding: 3rem 2rem">
+        <div class="hero-inner">
+          <div class="hero-eyebrow"><i class="ti ti-camera"></i> Galeri Kegiatan</div>
+          <h1>Dokumentasi <span>Kegiatan & Prestasi</span></h1>
+          <p>Rekam jejak praktik, industri, dan kompetisi jurusan TJKT SMKN 5 Malang.</p>
+        </div>
+      </div>
+      <div class="section">
+        <div class="section-header">
+          <span class="section-eyebrow">Kegiatan Unggulan</span>
+          <h2>Galeri Kegiatan TJKT</h2>
+          <div class="divider"></div>
+        </div>
+        <div class="galeri-grid">
+          <div class="galeri-card">
+            <div class="galeri-preview">
+              <div class="foto-placeholder"><i class="ti ti-wifi"></i><span>Taruh foto kegiatan</span></div>
+            </div>
+            <div class="galeri-info">
+              <span class="galeri-tag">PRAKTEK</span>
+              <div class="galeri-desc">Praktik Jaringan LAN - Lab Jaringan SMKN 5 Malang</div>
+            </div>
+          </div>
+          <div class="galeri-card">
+            <div class="galeri-preview">
+              <div class="foto-placeholder"><i class="ti ti-server"></i><span>Taruh foto kegiatan</span></div>
+            </div>
+            <div class="galeri-info">
+              <span class="galeri-tag">LAB</span>
+              <div class="galeri-desc">Konfigurasi Server - Administrasi Server Linux/Windows</div>
+            </div>
+          </div>
+          <div class="galeri-card">
+            <div class="galeri-preview">
+              <div class="foto-placeholder"><i class="ti ti-building-factory"></i><span>Taruh foto kegiatan</span></div>
+            </div>
+            <div class="galeri-info">
+              <span class="galeri-tag">INDUSTRI</span>
+              <div class="galeri-desc">Kelas Industri bersama PLN - Kerjasama dengan PT. PLN Icon Plus</div>
+            </div>
+          </div>
+          <div class="galeri-card">
+            <div class="galeri-preview">
+              <div class="foto-placeholder"><i class="ti ti-plug"></i><span>Taruh foto kegiatan</span></div>
+            </div>
+            <div class="galeri-info">
+              <span class="galeri-tag">PRAKTEK</span>
+              <div class="galeri-desc">Fiber Optic Splicing - Telekomunikasi & Fiber Optik</div>
+            </div>
+          </div>
+          <div class="galeri-card">
+            <div class="galeri-preview">
+              <div class="foto-placeholder"><i class="ti ti-trophy"></i><span>Taruh foto kegiatan</span></div>
+            </div>
+            <div class="galeri-info">
+              <span class="galeri-tag">PRESTASI</span>
+              <div class="galeri-desc">LKS Information Network Cabling - Roslan mewakili Kota Malang ke LKS Provinsi Jatim 2025</div>
+            </div>
+          </div>
+          <div class="galeri-card">
+            <div class="galeri-preview">
+              <div class="foto-placeholder"><i class="ti ti-certificate"></i><span>Taruh foto kegiatan</span></div>
+            </div>
+            <div class="galeri-info">
+              <span class="galeri-tag">SERTIFIKASI</span>
+              <div class="galeri-desc">Sertifikasi BNSP - Uji Kompetensi Keahlian Bersertifikat Nasional</div>
+            </div>
+          </div>
+        </div>
+        <div class="section-header">
+          <span class="section-eyebrow">Pencapaian</span>
+          <h2>Prestasi Jurusan TJKT</h2>
+          <div class="divider"></div>
+        </div>
+        <div>
+          <div class="prestasi-item">
+            <div class="prestasi-icon"><i class="ti ti-medal"></i></div>
+            <div>
+              <p style="font-weight: 700; color: #042c53">Lolos LKS Provinsi Jawa Timur 2025 – Information Network Cabling</p>
+              <p style="font-size: 12px; color: #888780">Roslan, siswa TJKT kelas XII, berhasil mewakili Kota Malang di ajang Lomba Kompetensi Siswa (LKS) tingkat Provinsi Jawa Timur.</p>
+            </div>
+          </div>
+          <div class="prestasi-item">
+            <div class="prestasi-icon"><i class="ti ti-building-factory"></i></div>
+            <div>
+              <p style="font-weight: 700; color: #042c53">Kelas Industri TJKT 2025</p>
+              <p style="font-size: 12px; color: #888780">Peresmian Kelas Industri bekerja sama dengan PT. PLN Icon Plus untuk meningkatkan kompetensi dan kesiapan kerja siswa.</p>
+            </div>
+          </div>
+          <div class="prestasi-item">
+            <div class="prestasi-icon"><i class="ti ti-certificate"></i></div>
+            <div>
+              <p style="font-weight: 700; color: #042c53">Sertifikasi Kompetensi BNSP</p>
+              <p style="font-size: 12px; color: #888780">Siswa TJKT mengikuti uji kompetensi sertifikasi profesi dari Badan Nasional Sertifikasi Profesi (BNSP).</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-container">
+        <div class="footer-brand">
+          <h3>TJKT SMKN 5 Malang</h3>
+          <p>Jurusan Teknik Jaringan Komputer dan Telekomunikasi – mencetak ahli jaringan inovatif dan siap kerja.</p>
+        </div>
+        <div class="footer-contact">
+          <h4>Hubungi Kami</h4>
+          <ul class="contact-list">
+            <li><i class="ti ti-map-pin"></i> Jl. Ikan Piranha No.50, Tunjungsekar, Malang</li>
+            <li><i class="ti ti-phone"></i> (0341) 478195</li>
+            <li><i class="ti ti-mail"></i> <a href="mailto:info@smkn5malang.sch.id">info@smkn5malang.sch.id</a></li>
+            <li><i class="ti ti-world"></i> <a href="https://www.smkn5malang.sch.id/" target="_blank">www.smkn5malang.sch.id</a></li>
+          </ul>
+        </div>
+        <div class="footer-social">
+          <h4>Ikuti saya</h4>
+          <div class="social-icons">
+            <a href="https://www.instagram.com/isamhasib/"><i class="ti ti-brand-instagram"></i></a><a href="https://wa.me/+6285196282026"><i class="ti ti-brand-whatsapp"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright"><strong>Jurusan Teknik Jaringan Komputer & Telekomunikasi</strong> · SMKN 5 Malang · © 2025</div>
+    </footer>
+
+    <a href="index4.html" class="back-home"><i class="ti ti-arrow-left"></i> Kembali ke Beranda</a>
+
+    <script>
+      function showPage(id, el) {
+        document.querySelectorAll(".page").forEach((p) => p.classList.remove("active"));
+        document.querySelectorAll(".nav-links a").forEach((a) => a.classList.remove("active"));
+        document.getElementById(id).classList.add("active");
+        el.classList.add("active");
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+    </script>
+  </body>
+</html>
