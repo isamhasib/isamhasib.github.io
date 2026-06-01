@@ -1,0 +1,720 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SMKN 5 Malang - Pusat Keunggulan Vokasi</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family:
+          "Inter",
+          -apple-system,
+          BlinkMacSystemFont,
+          sans-serif;
+        background: #f5f9fc;
+        color: #1e293b;
+        overflow-x: hidden;
+      }
+
+      /* TEMA SESUAI FOTO: DKV = HIJAU MUDA / TEAL, TJKT = BIRU / NAVY */
+      :root {
+        --navy-deep: #042c53;
+        --navy-mid: #0f3b6a;
+        --navy-light: #185fa5;
+        /* DKV - Hijau Muda / Teal */
+        --dkv-primary: #1a7f6e;
+        --dkv-secondary: #2a9d8f;
+        --dkv-soft: #e6f4f2;
+        --dkv-light-bg: #eef9f7;
+        /* TJKT - Biru / Navy */
+        --tkj-primary: #0f5288;
+        --tkj-secondary: #2c7da0;
+        --tkj-soft: #e8f0f8;
+        --border-light: #e2edf2;
+        --gray-700: #334155;
+      }
+
+      /* navbar utama */
+      .main-navbar {
+        background: var(--navy-deep);
+        padding: 0 2rem;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        border-bottom: 2px solid var(--dkv-primary);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      }
+
+      .logo-area {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .logo-icon {
+        background: linear-gradient(135deg, var(--dkv-primary), var(--tkj-primary));
+        width: 42px;
+        height: 42px;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        color: white;
+      }
+
+      .logo-text h1 {
+        font-size: 1.3rem;
+        font-weight: 800;
+        color: white;
+        letter-spacing: -0.3px;
+        line-height: 1.2;
+      }
+
+      .logo-text span {
+        font-size: 0.7rem;
+        font-weight: 500;
+        color: #bdd4e8;
+        display: block;
+      }
+
+      .nav-links-main {
+        display: flex;
+        gap: 1.5rem;
+      }
+
+      .nav-links-main a {
+        color: #e0edf5;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 0.9rem;
+        transition: 0.2s;
+        padding: 8px 0;
+        border-bottom: 2px solid transparent;
+      }
+
+      .nav-links-main a:hover {
+        color: white;
+        border-bottom-color: var(--dkv-primary);
+      }
+
+      /* hero utama */
+      .hero-main {
+        background: linear-gradient(115deg, var(--navy-deep) 0%, var(--navy-mid) 45%, var(--tkj-primary) 100%);
+        padding: 4rem 2rem;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .hero-main::before {
+        content: "⚙️🎨";
+        position: absolute;
+        font-size: 280px;
+        right: -40px;
+        bottom: -80px;
+        opacity: 0.06;
+        pointer-events: none;
+      }
+
+      .hero-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 2rem;
+      }
+
+      .hero-text {
+        flex: 1;
+        min-width: 280px;
+      }
+
+      .hero-text .badge-school {
+        display: inline-block;
+        background: rgba(42, 157, 143, 0.25);
+        backdrop-filter: blur(2px);
+        padding: 5px 14px;
+        border-radius: 40px;
+        font-size: 0.7rem;
+        font-weight: 700;
+        color: #ccece7;
+        margin-bottom: 1.2rem;
+        border: 1px solid rgba(42, 157, 143, 0.5);
+      }
+
+      .hero-text h1 {
+        font-size: clamp(2rem, 5vw, 3.5rem);
+        font-weight: 800;
+        color: white;
+        line-height: 1.2;
+        letter-spacing: -0.02em;
+        margin-bottom: 1rem;
+      }
+
+      .hero-text h1 span {
+        color: #5fc3b5;
+      }
+
+      .hero-text p {
+        color: #d4e2f0;
+        font-size: 1rem;
+        line-height: 1.6;
+        max-width: 500px;
+        margin-bottom: 2rem;
+      }
+
+      .hero-stats-mini {
+        display: flex;
+        gap: 2rem;
+      }
+
+      .stat-mini {
+        text-align: left;
+      }
+
+      .stat-mini .number {
+        font-size: 1.8rem;
+        font-weight: 800;
+        color: white;
+      }
+
+      .stat-mini .label {
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        color: #bdd4e8;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+      }
+
+      .hero-image {
+        flex: 0.8;
+        min-width: 240px;
+        text-align: center;
+      }
+
+      .hero-illus {
+        background: rgba(255, 255, 255, 0.08);
+        backdrop-filter: blur(10px);
+        border-radius: 36px;
+        padding: 1rem;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+      }
+
+      .hero-illus i {
+        font-size: 120px;
+        color: #5fc3b5;
+        opacity: 0.95;
+      }
+
+      /* section jurusan utama */
+      .jurusan-section {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 4rem 2rem;
+      }
+
+      .section-title {
+        text-align: center;
+        margin-bottom: 3rem;
+      }
+
+      .section-title h2 {
+        font-size: 2rem;
+        font-weight: 800;
+        color: var(--navy-deep);
+        letter-spacing: -0.02em;
+      }
+
+      .section-title p {
+        color: var(--gray-700);
+        max-width: 600px;
+        margin: 0.5rem auto 0;
+      }
+
+      .divider-center {
+        width: 80px;
+        height: 4px;
+        background: linear-gradient(90deg, var(--dkv-primary), var(--tkj-primary));
+        margin: 1rem auto 0;
+        border-radius: 4px;
+      }
+
+      /* Card sejajar stretch */
+      .card-jurusan-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        justify-content: center;
+        align-items: stretch;
+      }
+
+      .jurusan-card {
+        background: white;
+        border-radius: 28px;
+        flex: 1 1 0;
+        min-width: 280px;
+        max-width: 480px;
+        overflow: hidden;
+        transition: all 0.3s ease;
+        box-shadow: 0 16px 32px -12px rgba(0, 0, 0, 0.1);
+        border: 1px solid var(--border-light);
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .jurusan-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 28px 44px -16px rgba(0, 0, 0, 0.18);
+      }
+
+      .card-header {
+        padding: 1.8rem 1.8rem 1rem;
+        position: relative;
+      }
+
+      .card-icon {
+        width: 68px;
+        height: 68px;
+        border-radius: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 34px;
+        margin-bottom: 1.5rem;
+      }
+
+      /* DKV = Hijau Muda */
+      .dkv .card-icon {
+        background: #e6f4f2;
+        color: var(--dkv-primary);
+      }
+
+      /* TJKT = Biru */
+      .tkj .card-icon {
+        background: #e8f0f8;
+        color: var(--tkj-primary);
+      }
+
+      .jurusan-card h3 {
+        font-size: 1.6rem;
+        font-weight: 800;
+        letter-spacing: -0.3px;
+        margin-bottom: 0.5rem;
+      }
+
+      .dkv h3 {
+        color: var(--dkv-primary);
+      }
+
+      .tkj h3 {
+        color: var(--tkj-primary);
+      }
+
+      .badge-jurusan {
+        display: inline-block;
+        font-size: 0.7rem;
+        font-weight: 700;
+        padding: 5px 14px;
+        border-radius: 30px;
+        background: #f0f4f8;
+        color: #3a5468;
+        margin-bottom: 1rem;
+      }
+
+      .desc-card {
+        padding: 0 1.8rem 1.2rem;
+        color: #2c3e44;
+        font-size: 0.94rem;
+        line-height: 1.65;
+        border-bottom: 1px solid #eef2f6;
+        flex: 1;
+      }
+
+      .card-stats {
+        padding: 1rem 1.8rem 1.8rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: auto;
+      }
+
+      .stat-mini-card {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 0.8rem;
+        font-weight: 600;
+        color: #476b7a;
+        background: #f8fafc;
+        padding: 6px 14px;
+        border-radius: 40px;
+      }
+
+      .btn-explore {
+        background: transparent;
+        border: 1.8px solid;
+        padding: 8px 22px;
+        border-radius: 40px;
+        font-weight: 700;
+        font-size: 0.8rem;
+        transition: all 0.25s;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .dkv .btn-explore {
+        border-color: var(--dkv-primary);
+        color: var(--dkv-primary);
+      }
+
+      .dkv .btn-explore:hover {
+        background: var(--dkv-primary);
+        color: white;
+        box-shadow: 0 6px 14px rgba(26, 127, 110, 0.25);
+      }
+
+      .tkj .btn-explore {
+        border-color: var(--tkj-primary);
+        color: var(--tkj-primary);
+      }
+
+      .tkj .btn-explore:hover {
+        background: var(--tkj-primary);
+        color: white;
+        box-shadow: 0 6px 14px rgba(15, 82, 136, 0.25);
+      }
+
+      /* Prestasi section */
+      .highlight-section {
+        background: #eef2f8;
+        margin: 1rem auto;
+        border-radius: 40px;
+        max-width: 1100px;
+        padding: 2rem;
+        border: 1px solid #dfe8ef;
+      }
+
+      .flex-highlight {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        gap: 2rem;
+      }
+
+      .highlight-text h3 {
+        font-size: 1.5rem;
+        font-weight: 800;
+        color: var(--navy-deep);
+      }
+
+      .highlight-text p {
+        color: #2b4f62;
+        margin-top: 0.5rem;
+        line-height: 1.6;
+      }
+
+      .btn-secondary {
+        background: var(--navy-deep);
+        color: white;
+        padding: 12px 28px;
+        border-radius: 50px;
+        font-weight: 700;
+        border: none;
+        cursor: pointer;
+        transition: 0.25s;
+      }
+
+      .btn-secondary:hover {
+        background: var(--dkv-primary);
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px -8px rgba(26, 127, 110, 0.4);
+      }
+
+      /* Footer */
+      footer {
+        background: var(--navy-deep);
+        color: #cde3ef;
+        padding: 2rem 2rem 1.5rem;
+        margin-top: 3rem;
+        border-top: 3px solid var(--dkv-primary);
+      }
+      .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 2rem;
+      }
+      .footer-brand h3 {
+        font-size: 1.2rem;
+        color: white;
+        font-weight: 700;
+      }
+      .footer-contact h4,
+      .footer-social h4 {
+        font-size: 0.8rem;
+        letter-spacing: 1px;
+        margin-bottom: 1rem;
+        color: #cbdbe6;
+        font-weight: 700;
+      }
+      .contact-list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 0.6rem;
+      }
+      .contact-list li {
+        display: flex;
+        gap: 8px;
+        font-size: 0.8rem;
+        align-items: center;
+      }
+      .social-icons {
+        display: flex;
+        gap: 1rem;
+      }
+      .social-icons a {
+        background: rgba(255, 255, 255, 0.1);
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        transition: 0.2s;
+      }
+      .social-icons a:hover {
+        background: var(--dkv-primary);
+        transform: translateY(-3px);
+      }
+      .footer-copyright {
+        text-align: center;
+        padding-top: 1.5rem;
+        font-size: 0.7rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        margin-top: 1.5rem;
+      }
+
+      @media (max-width: 768px) {
+        .main-navbar {
+          flex-direction: column;
+          height: auto;
+          padding: 1rem;
+          gap: 0.8rem;
+        }
+        .hero-container {
+          flex-direction: column;
+          text-align: center;
+        }
+        .hero-text p {
+          margin-left: auto;
+          margin-right: auto;
+        }
+        .hero-stats-mini {
+          justify-content: center;
+        }
+        .card-jurusan-container {
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="main-navbar">
+      <div class="logo-area">
+        <div class="logo-icon">
+          <i class="ti ti-school"></i>
+        </div>
+        <div class="logo-text">
+          <h1>SMKN 5 MALANG</h1>
+          <span>Vokasi Unggul · Berkarakter · Berprestasi</span>
+        </div>
+      </div>
+      <div class="nav-links-main">
+        <a href="#home">Beranda</a>
+        <a href="#jurusan">Jurusan</a>
+        <a href="#tentang">Tentang Sekolah</a>
+        <a href="#kontak">Kontak</a>
+      </div>
+    </nav>
+
+    <section id="home" class="hero-main">
+      <div class="hero-container">
+        <div class="hero-text">
+          <div class="badge-school"><i class="ti ti-certificate"></i> AKREDITASI UNGGUL A</div>
+          <h1>Pusat Keunggulan <br /><span>Teknologi & Kreatif</span></h1>
+          <p>SMK Negeri 5 Malang (VOHISMA) menghadirkan dua program keahlian unggulan: Desain Komunikasi Visual (DKV) dan Teknik Jaringan Komputer Telekomunikasi (TJKT) yang siap mencetak talenta masa depan.</p>
+          <div class="hero-stats-mini">
+            <div class="stat-mini">
+              <div class="number">2</div>
+              <div class="label">Jurusan Unggulan</div>
+            </div>
+            <div class="stat-mini">
+              <div class="number">25+</div>
+              <div class="label">Tahun Prestasi</div>
+            </div>
+            <div class="stat-mini">
+              <div class="number">100%</div>
+              <div class="label">Link & Match</div>
+            </div>
+          </div>
+        </div>
+        <div class="hero-image">
+          <div class="hero-illus">
+            <i class="ti ti-device-laptop"></i>
+            <i class="ti ti-palette" style="margin-left: 16px"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="jurusan" class="jurusan-section">
+      <div class="section-title">
+        <h2>Pilihan Jurusan Kompetensi Keahlian</h2>
+        <p>Kurikulum berbasis industri, guru profesional, dan fasilitas modern</p>
+        <div class="divider-center"></div>
+      </div>
+      <div class="card-jurusan-container">
+        <!-- Card DKV - WARNA HIJAU MUDA / TEAL sesuai foto -->
+        <div class="jurusan-card dkv" id="card-dkv">
+          <div class="card-header">
+            <div class="card-icon"><i class="ti ti-palette"></i></div>
+            <span class="badge-jurusan">Konsentrasi Desain & Multimedia</span>
+            <h3>Desain Komunikasi Visual</h3>
+          </div>
+          <div class="desc-card">Jurusan DKV membekali siswa dengan kemampuan desain grafis, ilustrasi digital, animasi, branding, dan fotografi. Lulusan siap bekerja di industri kreatif, periklanan, dan media.</div>
+          <div class="card-stats">
+            <div class="stat-mini-card"><i class="ti ti-users"></i><span>kelas kreatif</span></div>
+            <button class="btn-explore" onclick="window.location.href = 'dkv.html'">Eksplor DKV <i class="ti ti-arrow-right"></i></button>
+          </div>
+        </div>
+
+        <!-- Card TJKT - WARNA BIRU / NAVY sesuai foto -->
+        <div class="jurusan-card tkj" id="card-tkj">
+          <div class="card-header">
+            <div class="card-icon"><i class="ti ti-server"></i></div>
+            <span class="badge-jurusan">Jaringan & Telekomunikasi</span>
+            <h3>Teknik Jaringan Komputer & Telekomunikasi</h3>
+          </div>
+          <div class="desc-card">TJKT (d/h TKJ) fokus pada instalasi jaringan, administrasi server, keamanan siber, fiber optik, dan konfigurasi perangkat telekomunikasi. Berkolaborasi dengan PT. PLN Icon Plus.</div>
+          <div class="card-stats">
+            <div class="stat-mini-card"><i class="ti ti-certificate"></i><span>Kelas Industri</span></div>
+            <button class="btn-explore" onclick="window.location.href = 'tkjt.html'">Eksplor TJKT <i class="ti ti-arrow-right"></i></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="tentang" class="highlight-section">
+      <div class="flex-highlight">
+        <div class="highlight-text">
+          <h3>🏆 Prestasi & Inovasi 2025</h3>
+          <p>
+            ✔ Lolos LKS Provinsi Jatim bidang Information Network Cabling (TJKT)<br />
+            ✔ Pameran DKV Expo tahunan & Sertifikasi BNSP Desain Grafis Muda<br />
+            ✔ Teaching Factory bersama PLN Icon Plus & Malang Creative Center<br />
+            ✔ Akreditasi Unggul A serta link and match dengan dunia industri
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- tentang sekolah -->
+    <div style="max-width: 1100px; margin: 1rem auto 0; padding: 0 2rem">
+      <div style="background: white; border-radius: 32px; padding: 2rem; border: 1px solid #e2edf2; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04)">
+        <div style="display: flex; gap: 1.5rem; flex-wrap: wrap; align-items: center">
+          <div style="flex: 1">
+            <h3 style="font-size: 1.5rem; font-weight: 800; color: #042c53">SMKN 5 Malang (VOHISMA)</h3>
+            <p style="margin-top: 0.5rem; color: #2c5368; line-height: 1.6">
+              Berdiri sejak 1998, SMKN 5 Malang telah menjadi rujukan sekolah vokasi di Jawa Timur. Selain jurusan DKV dan TJKT, sekolah juga memiliki program Kriya Kreatif, Busana, dan Tekstil. Dengan motto "Vokasi Unggul, Mandiri,
+              Berkarakter", kami siap mendukung siswa menjadi profesional.
+            </p>
+            <div style="display: flex; gap: 12px; margin-top: 1rem"><i class="ti ti-map-pin" style="color: #1a7f6e"></i> <span style="font-size: 0.85rem">Jl. Ikan Piranha No.50, Tunjungsekar, Malang</span></div>
+          </div>
+          <div style="background: #f0f6fa; border-radius: 28px; padding: 1rem; text-align: center">
+            <i class="ti ti-building-community" style="font-size: 64px; color: #0f5288"></i>
+            <p style="font-weight: bold; margin-top: 8px">Kampus Pusat Kota</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer id="kontak">
+      <div class="footer-container">
+        <div class="footer-brand">
+          <h3>SMK Negeri 5 Malang</h3>
+          <p>Pusat Keunggulan Vokasi bidang Teknologi dan Kreatif</p>
+          <p style="margin-top: 8px"><i class="ti ti-device-desktop"></i> DKV | TJKT</p>
+        </div>
+        <div class="footer-contact">
+          <h4>Kontak & Alamat</h4>
+          <ul class="contact-list">
+            <li><i class="ti ti-map-pin"></i> Jl. Ikan Piranha No.50, Tunjungsekar, Lowokwaru, Malang</li>
+            <li><i class="ti ti-phone"></i> (0341) 478195</li>
+            <li><i class="ti ti-mail"></i> info@smkn5malang.sch.id</li>
+            <li><i class="ti ti-world"></i> www.smkn5malang.sch.id</li>
+          </ul>
+        </div>
+        <div class="footer-social">
+          <h4>Ikuti saya</h4>
+          <div class="social-icons">
+            <a href="https://www.instagram.com/isamhasib/"><i class="ti ti-brand-instagram"></i></a>
+            <a href="https://wa.me/+6285196282026"><i class="ti ti-brand-whatsapp"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">© 2025 SMKN 5 Malang – Jurusan DKV & TJKT | Membangun Generasi Kreatif & Kompeten</div>
+    </footer>
+
+    <script>
+      document.querySelectorAll(".nav-links-main a").forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          const href = this.getAttribute("href");
+          if (href && href.startsWith("#")) {
+            e.preventDefault();
+            const target = document.querySelector(href);
+            if (target) target.scrollIntoView({ behavior: "smooth" });
+          }
+        });
+      });
+      const dkvCard = document.getElementById("card-dkv");
+      const tkjCard = document.getElementById("card-tkj");
+      if (dkvCard) {
+        dkvCard.addEventListener("click", (e) => {
+          if (e.target.tagName !== "BUTTON" && !e.target.closest(".btn-explore")) {
+            window.location.href = "dkv.html";
+          }
+        });
+      }
+      if (tkjCard) {
+        tkjCard.addEventListener("click", (e) => {
+          if (e.target.tagName !== "BUTTON" && !e.target.closest(".btn-explore")) {
+            window.location.href = "tjkt.html";
+          }
+        });
+      }
+    </script>
+  </body>
+</html>

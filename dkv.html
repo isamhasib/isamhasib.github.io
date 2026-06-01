@@ -1,0 +1,1202 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DKV SMKN 5 Malang - Profil Jurusan Desain Komunikasi Visual</title>
+    <!-- Font Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      :root {
+        /* Tema baru: Nuansa Teal & Hijau Tosca */
+        --dkv-primary-dark: #0f3b3c;
+        --dkv-primary: #1a6b6b;
+        --dkv-primary-light: #2a9d8f;
+        --dkv-primary-soft: #e0f2f1;
+        --dkv-accent: #e9c46a;
+        --dkv-accent-dark: #d4a373;
+        --dkv-accent-light: #f4e3b1;
+        --dkv-gray-50: #f4f6f9;
+        --dkv-gray-100: #e2e6ea;
+        --dkv-gray-200: #cbd0d6;
+        --dkv-gray-400: #8e96a3;
+        --dkv-gray-600: #5a626e;
+        --dkv-gray-800: #343a40;
+        --dkv-gray-900: #1e2327;
+      }
+      body {
+        font-family:
+          "Inter",
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          Helvetica,
+          Arial,
+          sans-serif;
+        background: #f0f6f5;
+        color: #1e2a2e;
+        overflow-x: hidden;
+      }
+
+      nav {
+        background: var(--dkv-primary-dark);
+        padding: 0 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 64px;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        border-bottom: 2px solid var(--dkv-accent);
+        flex-wrap: wrap;
+      }
+      .nav-brand {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: #fff;
+        font-family: "Inter", sans-serif;
+        font-size: 1.2rem;
+        font-weight: 800;
+        letter-spacing: -0.2px;
+      }
+      .nav-brand .badge {
+        background: var(--dkv-accent);
+        color: var(--dkv-primary-dark);
+        font-size: 11px;
+        font-family: "Inter", sans-serif;
+        font-weight: 800;
+        padding: 3px 8px;
+        border-radius: 4px;
+      }
+      .nav-links {
+        display: flex;
+        gap: 6px;
+        flex-wrap: wrap;
+      }
+      .nav-links a {
+        color: #bbdfdc;
+        text-decoration: none;
+        font-size: 13px;
+        font-weight: 500;
+        padding: 6px 12px;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: all 0.2s;
+      }
+      .nav-links a:hover,
+      .nav-links a.active {
+        background: var(--dkv-accent);
+        color: var(--dkv-primary-dark);
+      }
+
+      .hero {
+        background: linear-gradient(135deg, #0f3b3c 0%, #1a6b6b 50%, #2a9d8f 100%);
+        padding: 5rem 2rem 4rem;
+        position: relative;
+        overflow: hidden;
+      }
+      .hero::before {
+        content: "✨";
+        position: absolute;
+        top: -60px;
+        right: -60px;
+        font-size: 260px;
+        opacity: 0.08;
+        pointer-events: none;
+      }
+      .hero::after {
+        content: "🎨";
+        position: absolute;
+        bottom: -40px;
+        left: 10%;
+        font-size: 160px;
+        opacity: 0.06;
+        pointer-events: none;
+      }
+      .hero-inner {
+        max-width: 860px;
+        margin: 0 auto;
+        position: relative;
+        z-index: 1;
+      }
+      .hero-eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: rgba(42, 157, 143, 0.35);
+        border: 1px solid rgba(233, 196, 106, 0.4);
+        color: #f4e3b1;
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        padding: 6px 14px;
+        border-radius: 20px;
+        margin-bottom: 1.5rem;
+      }
+      .hero h1 {
+        font-family: "Inter", sans-serif;
+        font-size: clamp(2rem, 5vw, 3.2rem);
+        font-weight: 800;
+        color: #fff;
+        line-height: 1.1;
+        margin-bottom: 1rem;
+        letter-spacing: -0.02em;
+      }
+      .hero h1 span {
+        color: var(--dkv-accent);
+      }
+      .hero p {
+        color: #d1ece9;
+        font-size: 1.05rem;
+        line-height: 1.7;
+        max-width: 560px;
+        margin-bottom: 2rem;
+      }
+      .hero-stats {
+        display: flex;
+        gap: 2rem;
+        flex-wrap: wrap;
+      }
+      .hero-stat {
+        text-align: left;
+      }
+      .hero-stat .num {
+        font-family: "Inter", sans-serif;
+        font-size: 2rem;
+        font-weight: 800;
+        color: #fff;
+        letter-spacing: -0.01em;
+      }
+      .hero-stat .lbl {
+        font-size: 12px;
+        color: #d1ece9;
+        font-weight: 500;
+      }
+
+      .section {
+        padding: 3.5rem 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      .section-header {
+        margin-bottom: 2rem;
+      }
+      .section-eyebrow {
+        display: inline-block;
+        background: var(--dkv-primary-soft);
+        color: var(--dkv-primary);
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        padding: 4px 12px;
+        border-radius: 4px;
+        margin-bottom: 0.6rem;
+      }
+      .section-header h2 {
+        font-family: "Inter", sans-serif;
+        font-size: 1.7rem;
+        font-weight: 800;
+        color: var(--dkv-primary-dark);
+        line-height: 1.2;
+        letter-spacing: -0.01em;
+      }
+      .divider {
+        width: 48px;
+        height: 4px;
+        background: var(--dkv-accent);
+        border-radius: 2px;
+        margin-top: 0.6rem;
+      }
+
+      .card {
+        background: #fff;
+        border: 1px solid #cfdfdd;
+        border-radius: 20px;
+        padding: 1.5rem;
+        transition:
+          box-shadow 0.2s,
+          transform 0.2s;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+      }
+      .card:hover {
+        box-shadow: 0 16px 32px rgba(26, 107, 107, 0.12);
+        transform: translateY(-2px);
+      }
+
+      .profile-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+      }
+      .profile-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+        background: #fff;
+        border: 1px solid #e2ecea;
+        border-radius: 18px;
+        padding: 1.25rem;
+        transition: all 0.2s;
+      }
+      .profile-item:hover {
+        border-color: var(--dkv-primary-light);
+        background: #fefcf5;
+      }
+      .profile-icon {
+        width: 40px;
+        height: 40px;
+        background: var(--dkv-primary-soft);
+        border-radius: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        color: var(--dkv-primary);
+        font-size: 20px;
+      }
+      .profile-item h3 {
+        font-size: 12px;
+        color: var(--dkv-gray-400);
+        font-weight: 600;
+        letter-spacing: 0.3px;
+        text-transform: uppercase;
+        margin-bottom: 3px;
+      }
+      .profile-item p {
+        font-size: 14px;
+        color: var(--dkv-primary-dark);
+        font-weight: 600;
+        line-height: 1.4;
+      }
+
+      .sejarah-box {
+        background: #fff;
+        border: 1px solid #cfdfdd;
+        border-radius: 24px;
+        padding: 2rem;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+      }
+      .sejarah-box::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 6px;
+        background: linear-gradient(180deg, var(--dkv-accent), var(--dkv-primary-light));
+      }
+      .sejarah-box p {
+        color: var(--dkv-gray-800);
+        font-size: 0.95rem;
+        line-height: 1.8;
+        margin-bottom: 1rem;
+      }
+      .sejarah-box p:last-child {
+        margin-bottom: 0;
+      }
+
+      .timeline {
+        margin-top: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+      }
+      .tl-item {
+        display: flex;
+        gap: 16px;
+        position: relative;
+      }
+      .tl-item:not(:last-child)::after {
+        content: "";
+        position: absolute;
+        left: 19px;
+        top: 32px;
+        width: 2px;
+        height: calc(100% - 12px);
+        background: var(--dkv-primary-soft);
+      }
+      .tl-dot {
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        background: #fff;
+        border: 2px solid var(--dkv-accent);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        z-index: 1;
+        font-size: 11px;
+        font-weight: 700;
+        color: var(--dkv-primary);
+      }
+      .tl-content {
+        padding-bottom: 1.5rem;
+      }
+      .tl-content .year {
+        font-size: 12px;
+        font-weight: 700;
+        color: var(--dkv-primary);
+        letter-spacing: 0.3px;
+      }
+      .tl-content .desc {
+        font-size: 14px;
+        color: var(--dkv-gray-600);
+        margin-top: 2px;
+        line-height: 1.5;
+      }
+
+      /* Guru Grid */
+      .guru-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 1.5rem;
+        margin-bottom: 1.5rem;
+      }
+      .guru-card {
+        background: #fff;
+        border: 1px solid #e2ecea;
+        border-radius: 28px;
+        padding: 1.5rem;
+        text-align: center;
+        transition: all 0.2s;
+      }
+      .guru-card:hover {
+        border-color: var(--dkv-accent);
+        box-shadow: 0 12px 28px rgba(42, 157, 143, 0.12);
+        transform: translateY(-4px);
+      }
+      .guru-avatar {
+        width: 110px;
+        height: 110px;
+        border-radius: 50%;
+        margin: 0 auto 12px;
+        overflow: hidden;
+        background: #eaf8f6;
+        border: 3px solid var(--dkv-accent);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .guru-avatar img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .guru-avatar .foto-placeholder {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: var(--dkv-primary);
+        width: 100%;
+      }
+      .guru-avatar .foto-placeholder i {
+        font-size: 36px;
+        margin-bottom: 4px;
+      }
+      .guru-avatar .foto-placeholder span {
+        font-size: 9px;
+        background: var(--dkv-primary-soft);
+        padding: 2px 6px;
+        border-radius: 12px;
+        color: var(--dkv-primary-dark);
+      }
+      .guru-card h3 {
+        font-size: 14px;
+        font-weight: 700;
+        color: var(--dkv-primary-dark);
+        margin-bottom: 4px;
+        line-height: 1.3;
+      }
+      .guru-card .mapel {
+        font-size: 11px;
+        color: #fff;
+        font-weight: 600;
+        background: var(--dkv-primary);
+        padding: 3px 10px;
+        border-radius: 20px;
+        display: inline-block;
+        margin-bottom: 6px;
+        text-transform: uppercase;
+      }
+      .guru-card .jabatan {
+        font-size: 11px;
+        color: var(--dkv-gray-400);
+      }
+
+      /* Galeri kegiatan */
+      .galeri-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 1.5rem;
+        margin-bottom: 2rem;
+      }
+      .galeri-card {
+        background: #fff;
+        border: 1px solid #e2ecea;
+        border-radius: 24px;
+        overflow: hidden;
+        transition: all 0.2s;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+      }
+      .galeri-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 20px 30px rgba(26, 107, 107, 0.12);
+        border-color: var(--dkv-primary-light);
+      }
+      .galeri-preview {
+        min-height: 180px;
+        background: #eef6f4;
+        border-bottom: 1px solid #deecea;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+      .galeri-preview .foto-placeholder {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+        color: var(--dkv-primary);
+      }
+      .galeri-preview .foto-placeholder i {
+        font-size: 48px;
+        margin-bottom: 8px;
+        opacity: 0.6;
+      }
+      .galeri-preview .foto-placeholder span {
+        font-size: 11px;
+        font-weight: 500;
+        background: #fff0cf;
+        padding: 4px 12px;
+        border-radius: 20px;
+        color: var(--dkv-primary-dark);
+      }
+      .galeri-preview img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+        display: block;
+      }
+      .galeri-info {
+        padding: 1rem;
+      }
+      .galeri-tag {
+        display: inline-block;
+        background: var(--dkv-primary-soft);
+        color: var(--dkv-primary);
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        padding: 4px 10px;
+        border-radius: 20px;
+        margin-bottom: 10px;
+      }
+      .galeri-desc {
+        font-size: 13px;
+        color: var(--dkv-gray-700);
+        font-weight: 500;
+        line-height: 1.4;
+      }
+
+      .prestasi-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 1rem;
+        background: #fff;
+        border: 1px solid #e2ecea;
+        border-radius: 20px;
+        padding: 1.2rem;
+        margin-bottom: 1rem;
+        transition: 0.1s linear;
+      }
+      .prestasi-item:hover {
+        border-color: var(--dkv-accent);
+        background: #fefaf0;
+      }
+      .prestasi-icon {
+        width: 48px;
+        height: 48px;
+        background: var(--dkv-primary-dark);
+        border-radius: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+      }
+      .prestasi-icon i {
+        font-size: 24px;
+        color: var(--dkv-accent);
+      }
+
+      .visi-misi {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+      }
+      .vm-card {
+        background: #fff;
+        border: 1px solid #e2ecea;
+        border-radius: 20px;
+        padding: 1.5rem;
+      }
+      .vm-card.visi {
+        border-top: 4px solid var(--dkv-accent);
+      }
+      .vm-card.misi {
+        border-top: 4px solid var(--dkv-primary);
+      }
+      .vm-card h3 {
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        margin-bottom: 0.8rem;
+      }
+      .vm-card.visi h3 {
+        color: var(--dkv-accent-dark);
+      }
+      .vm-card.misi h3 {
+        color: var(--dkv-primary);
+      }
+      .vm-card p {
+        font-size: 14px;
+        color: var(--dkv-gray-800);
+        line-height: 1.7;
+      }
+      .misi-list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+      .misi-list li {
+        display: flex;
+        gap: 8px;
+        font-size: 14px;
+        color: var(--dkv-gray-800);
+        line-height: 1.5;
+      }
+      .misi-list li::before {
+        content: "✨";
+        font-size: 12px;
+        margin-top: 2px;
+        flex-shrink: 0;
+      }
+
+      .kompetensi-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+      }
+      .komp-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+        background: #fff;
+        border: 1px solid #e2ecea;
+        border-radius: 18px;
+        padding: 1.2rem;
+        transition: 0.1s;
+      }
+      .komp-item:hover {
+        background: #fefcf7;
+        border-color: var(--dkv-accent);
+      }
+      .komp-num {
+        width: 32px;
+        height: 32px;
+        background: var(--dkv-primary);
+        color: #fff;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 13px;
+        font-weight: 700;
+        flex-shrink: 0;
+      }
+      .komp-item p {
+        font-size: 14px;
+        color: #1e2a2e;
+        font-weight: 500;
+        line-height: 1.4;
+      }
+
+      footer {
+        background: var(--dkv-primary-dark);
+        color: #cfe7e4;
+        padding: 2rem 2rem 1.5rem;
+        border-top: 2px solid var(--dkv-accent);
+        font-size: 13px;
+      }
+      .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 2rem;
+        margin-bottom: 2rem;
+      }
+      .footer-brand {
+        flex: 1;
+        min-width: 180px;
+      }
+      .footer-brand h3 {
+        font-family: "Inter", sans-serif;
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: #ffe6b3;
+        margin-bottom: 0.5rem;
+      }
+      .footer-contact {
+        flex: 1.2;
+        min-width: 220px;
+      }
+      .footer-contact h4,
+      .footer-social h4 {
+        font-size: 0.8rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: var(--dkv-accent);
+        margin-bottom: 1rem;
+      }
+      .contact-list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 0.7rem;
+      }
+      .contact-list li {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 13px;
+        color: #d1ece9;
+      }
+      .contact-list li i {
+        font-size: 18px;
+        color: var(--dkv-accent);
+        width: 24px;
+      }
+      .contact-list li a {
+        color: #d1ece9;
+        text-decoration: none;
+      }
+      .contact-list li a:hover {
+        color: white;
+      }
+      .footer-social {
+        flex: 0.8;
+        min-width: 150px;
+      }
+      .social-icons {
+        display: flex;
+        gap: 1rem;
+        margin-top: 0.5rem;
+      }
+      .social-icons a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 34px;
+        height: 34px;
+        background: rgba(233, 196, 106, 0.15);
+        border-radius: 40px;
+        color: #e9c46a;
+        font-size: 18px;
+        transition: all 0.2s;
+        text-decoration: none;
+      }
+      .social-icons a:hover {
+        background: var(--dkv-accent);
+        color: var(--dkv-primary-dark);
+        transform: translateY(-2px);
+      }
+      .footer-copyright {
+        text-align: center;
+        padding-top: 1.5rem;
+        border-top: 1px solid rgba(233, 196, 106, 0.25);
+        font-size: 11px;
+        color: #b2d1ce;
+      }
+      .footer-copyright strong {
+        color: #f4e3b1;
+      }
+
+      .page {
+        display: none;
+      }
+      .page.active {
+        display: block;
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(12px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .page.active .section {
+        animation: fadeIn 0.35s ease;
+      }
+
+      .back-home {
+        position: fixed;
+        bottom: 24px;
+        right: 24px;
+        background: var(--dkv-primary);
+        color: white;
+        padding: 12px 18px;
+        border-radius: 40px;
+        text-decoration: none;
+        font-size: 13px;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        transition: all 0.2s;
+        z-index: 99;
+        border: 1px solid var(--dkv-accent);
+      }
+      .back-home:hover {
+        background: var(--dkv-accent);
+        color: var(--dkv-primary-dark);
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(233, 196, 106, 0.4);
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="nav-brand">
+        <i class="ti ti-palette" style="font-size: 22px; color: #e9c46a"></i>
+        DKV
+        <span class="badge">SMKN 5 MALANG</span>
+      </div>
+      <div class="nav-links">
+        <a class="active" onclick="showPage('profil', this)">Profil</a>
+        <a onclick="showPage('sejarah', this)">Sejarah</a>
+        <a onclick="showPage('guru', this)">Guru</a>
+        <a onclick="showPage('dokumentasi', this)">Dokumentasi</a>
+      </div>
+    </nav>
+
+    <div id="profil" class="page active">
+      <div class="hero">
+        <div class="hero-inner">
+          <div class="hero-eyebrow"><i class="ti ti-brush"></i> Jurusan Kreatif Unggulan</div>
+          <h1>Desain Komunikasi <span>Visual</span></h1>
+          <p>Mencetak desainer muda kreatif, inovatif, dan siap bersaing di industri kreatif digital serta dunia usaha.</p>
+          <div class="hero-stats">
+            <div class="hero-stat">
+              <div class="num">3</div>
+              <div class="lbl">Tahun Program</div>
+            </div>
+            <div class="hero-stat">
+              <div class="num">5</div>
+              <div class="lbl">Tenaga Pengajar</div>
+            </div>
+            <div class="hero-stat">
+              <div class="num">A</div>
+              <div class="lbl">Akreditasi</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div class="section-header">
+          <span class="section-eyebrow">Profil Jurusan</span>
+          <h2>Tentang DKV SMKN 5 Malang</h2>
+          <div class="divider"></div>
+        </div>
+        <div class="card" style="margin-bottom: 1.5rem">
+          <p style="color: #2c3e3e; font-size: 0.95rem; line-height: 1.8">
+            Jurusan <strong>Desain Komunikasi Visual (DKV)</strong> di SMKN 5 Malang adalah program keahlian yang fokus pada pengembangan kreativitas di bidang desain grafis, ilustrasi, animasi, multimedia, dan branding. Dengan pendekatan
+            berbasis proyek (project-based learning) dan koneksi industri kreatif, jurusan ini mempersiapkan lulusan menjadi desainer profesional yang adaptif terhadap perkembangan teknologi visual.
+          </p>
+        </div>
+        <div class="profile-grid">
+          <div class="profile-item">
+            <div class="profile-icon"><i class="ti ti-school"></i></div>
+            <div>
+              <h3>Nama Jurusan</h3>
+              <p>Desain Komunikasi Visual (DKV)</p>
+            </div>
+          </div>
+          <div class="profile-item">
+            <div class="profile-icon"><i class="ti ti-building"></i></div>
+            <div>
+              <h3>Sekolah</h3>
+              <p>SMKN 5 Malang (VOHISMA)</p>
+            </div>
+          </div>
+          <div class="profile-item">
+            <div class="profile-icon"><i class="ti ti-calendar"></i></div>
+            <div>
+              <h3>Jenjang</h3>
+              <p>SMK – 3 Tahun</p>
+            </div>
+          </div>
+          <div class="profile-item">
+            <div class="profile-icon"><i class="ti ti-certificate"></i></div>
+            <div>
+              <h3>Akreditasi Sekolah</h3>
+              <p>A (Unggul) - SK No. 1214/BAN-SM/SK/2018</p>
+            </div>
+          </div>
+          <div class="profile-item">
+            <div class="profile-icon"><i class="ti ti-users"></i></div>
+            <div>
+              <h3>Kepala Sekolah</h3>
+              <p>Slamet Winarto M.Pd</p>
+            </div>
+          </div>
+          <div class="profile-item">
+            <div class="profile-icon"><i class="ti ti-map-pin"></i></div>
+            <div>
+              <h3>Lokasi</h3>
+              <p>Jl. Ikan Piranha No.50, Tunjungsekar, Malang</p>
+            </div>
+          </div>
+        </div>
+        <div style="margin-top: 2rem">
+          <div class="section-header">
+            <span class="section-eyebrow">Visi & Misi</span>
+            <h2>Landasan Jurusan DKV</h2>
+            <div class="divider"></div>
+          </div>
+          <div class="visi-misi">
+            <div class="vm-card visi">
+              <h3>Visi</h3>
+              <p>Menjadi pusat pendidikan desain yang unggul dalam menciptakan lulusan berkarakter, kreatif, dan berdaya saing global di bidang Desain Komunikasi Visual.</p>
+            </div>
+            <div class="vm-card misi">
+              <h3>Misi</h3>
+              <ul class="misi-list">
+                <li>Kurikulum berbasis industri dan proyek desain nyata (Teaching Factory Desain)</li>
+                <li>Mengembangkan portofolio siswa melalui lomba, pameran, dan kolaborasi industri</li>
+                <li>Kemitraan dengan studio desain, percetakan, dan agency kreatif</li>
+                <li>Menanamkan jiwa inovasi, estetika, dan kewirausahaan desain</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div style="margin-top: 2rem">
+          <div class="section-header">
+            <span class="section-eyebrow">Kompetensi Keahlian</span>
+            <h2>Yang Akan Dipelajari</h2>
+            <div class="divider"></div>
+          </div>
+          <div class="kompetensi-grid">
+            <div class="komp-item">
+              <div class="komp-num">01</div>
+              <p>Desain Grafis (Adobe Photoshop, Illustrator, InDesign)</p>
+            </div>
+            <div class="komp-item">
+              <div class="komp-num">02</div>
+              <p>Tipografi & Desain Layout</p>
+            </div>
+            <div class="komp-item">
+              <div class="komp-num">03</div>
+              <p>Ilustrasi Digital & Tradisional</p>
+            </div>
+            <div class="komp-item">
+              <div class="komp-num">04</div>
+              <p>Animasi 2D / Motion Graphic</p>
+            </div>
+            <div class="komp-item">
+              <div class="komp-num">05</div>
+              <p>Fotografi & Videografi Dasar</p>
+            </div>
+            <div class="komp-item">
+              <div class="komp-num">06</div>
+              <p>Branding & Periklanan</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="sejarah" class="page">
+      <div class="hero" style="padding: 3rem 2rem">
+        <div class="hero-inner">
+          <div class="hero-eyebrow"><i class="ti ti-history"></i> Perjalanan Kreatif</div>
+          <h1>Sejarah <span>DKV SMKN 5 Malang</span></h1>
+          <p>Mengukir prestasi dan melahirkan talenta desain terbaik di Jawa Timur.</p>
+        </div>
+      </div>
+      <div class="section">
+        <div class="sejarah-box">
+          <p>
+            <strong>SMK Negeri 5 Malang</strong> berdiri pada <strong>29 Januari 1998</strong> dengan SK Pendirian No. 13a/O/1998. Awalnya memiliki keunggulan di bidang Kriya (Kayu, Keramik, Tekstil) dan Busana Butik. Seiring perubahan
+            kurikulum dan kebutuhan industri kreatif digital, pada tahun <strong>2005</strong> sekolah mulai membuka kompetensi keahlian Multimedia (awal dari cikal bakal Desain Komunikasi Visual).
+          </p>
+          <p>
+            Pada tahun <strong>2018</strong>, Jurusan Multimedia resmi bertransformasi menjadi <strong>Desain Komunikasi Visual (DKV)</strong> dengan kurikulum yang lebih terfokus pada branding, ilustrasi, dan konten visual digital. Sejak
+            saat itu, DKV SMKN 5 Malang terus berkembang, menghadirkan laboratorium desain grafis, studio ilustrasi, dan fasilitas pendukung lainnya.
+          </p>
+          <p>
+            Bekerja sama dengan komunitas desainer Malang, CV. Karya Desain Nusantara, dan Malang Creative Center (MCC), jurusan DKV aktif menggelar pameran tahunan (DKV Expo), workshop desain, serta magang di industri kreatif. Hingga 2025,
+            jurusan ini telah meluluskan ratusan desainer muda yang banyak berkarya di perusahaan periklanan, start-up, dan studio kreatif.
+          </p>
+        </div>
+        <div class="section-header">
+          <span class="section-eyebrow">Linimasa</span>
+          <h2>Tonggak Sejarah DKV</h2>
+          <div class="divider"></div>
+        </div>
+        <div class="timeline">
+          <div class="tl-item">
+            <div class="tl-dot">1998</div>
+            <div class="tl-content">
+              <div class="year">29 Januari 1998</div>
+              <div class="desc">SMKN 5 Malang resmi berdiri dengan jurusan Kriya dan Busana</div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot">2005</div>
+            <div class="tl-content">
+              <div class="year">2005 — Jurusan Multimedia</div>
+              <div class="desc">Dibuka jurusan Multimedia sebagai cikal bakal DKV, fokus desain grafis dan produksi konten.</div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot">2018</div>
+            <div class="tl-content">
+              <div class="year">2018 — Rebranding menjadi DKV</div>
+              <div class="desc">Multimedia bertransformasi menjadi Desain Komunikasi Visual (DKV) dengan kurikulum lebih spesifik.</div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot">2022</div>
+            <div class="tl-content">
+              <div class="year">2022 — Pameran DKV Expo #1</div>
+              <div class="desc">Menggelar pameran karya desain siswa pertama yang dibuka untuk publik di Malang Creative Center.</div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot">2025</div>
+            <div class="tl-content">
+              <div class="year">2025 — Kelas Industri Desain</div>
+              <div class="desc">Kerja sama dengan MCC dan Studio Desain lokal untuk teaching factory dan proyek klien riil.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="guru" class="page">
+      <div class="hero" style="padding: 3rem 2rem">
+        <div class="hero-inner">
+          <div class="hero-eyebrow"><i class="ti ti-users"></i> Tim Pengajar Kreatif</div>
+          <h1>Guru & <span>Praktisi DKV</span></h1>
+          <p>Pengajar berpengalaman di bidang desain grafis, ilustrasi, dan multimedia.</p>
+        </div>
+      </div>
+      <div class="section">
+        <div class="section-header">
+          <span class="section-eyebrow">Struktur</span>
+          <h2>Kepala Jurusan DKV</h2>
+          <div class="divider"></div>
+        </div>
+        <div class="guru-grid" style="grid-template-columns: repeat(auto-fill, minmax(260px, 1fr))">
+          <div class="guru-card">
+            <div class="guru-avatar"><img src="" alt="Foto Kepala Jurusan" onerror="this.src = 'https://placehold.co/110x110?text=No+Image'" /></div>
+            <h3>""</h3>
+            <span class="mapel">Kepala Jurusan DKV</span>
+          </div>
+        </div>
+        <div class="section-header">
+          <span class="section-eyebrow">Pengajar</span>
+          <h2>Tim Guru DKV</h2>
+          <div class="divider"></div>
+        </div>
+        <div class="guru-grid">
+          <div class="guru-card">
+            <div class="guru-avatar"><img src="img/M. Agus Salim S.Pd..jpg" alt="Foto guru" onerror="this.src = 'https://placehold.co/110x110?text=No+Image'" /></div>
+            <h3>M. Agus Salim S.Pd.</h3>
+            <span class="mapel">pengajar</span>
+          </div>
+          <div class="guru-card">
+            <div class="guru-avatar"><img src="img/Nita Oktiningsih S.Pd..jpg" alt="Foto guru" onerror="this.src = 'https://placehold.co/110x110?text=No+Image'" /></div>
+            <h3>Nita Oktiningsih S.Pd.</h3>
+            <span class="mapel">pengajar</span>
+          </div>
+          <div class="guru-card">
+            <div class="guru-avatar"><img src="img/Riza Habiby S.Sn..jpg" alt="Foto guru" onerror="this.src = 'https://placehold.co/110x110?text=No+Image'" /></div>
+            <h3>Riza Habiby S.Sn.</h3>
+            <span class="mapel">pengajar</span>
+          </div>
+          <div class="guru-card">
+            <div class="guru-avatar"><img src="img/Tri Wahjoedi Hidajat M.Pd..jpg" alt="Foto guru" onerror="this.src = 'https://placehold.co/110x110?text=No+Image'" /></div>
+            <h3>Tri Wahjoedi Hidajat M.Pd.</h3>
+            <span class="mapel">pengajar</span>
+          </div>
+          <div class="guru-card">
+            <div class="guru-avatar"><img src="img/Wahyu Andreas S.Kom. M.Pd..jpg" alt="Foto guru" onerror="this.src = 'https://placehold.co/110x110?text=No+Image'" /></div>
+            <h3>Wahyu Andreas S.Kom. M.Pd.</h3>
+            <span class="mapel">pengajar</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="dokumentasi" class="page">
+      <div class="hero" style="padding: 3rem 2rem">
+        <div class="hero-inner">
+          <div class="hero-eyebrow"><i class="ti ti-camera"></i> Galeri Kreativitas</div>
+          <h1>Dokumentasi <span>Karya & Prestasi</span></h1>
+          <p>Pameran desain, lomba, dan proyek industri siswa DKV SMKN 5 Malang.</p>
+        </div>
+      </div>
+      <div class="section">
+        <div class="section-header">
+          <span class="section-eyebrow">Karya Unggulan</span>
+          <h2>Galeri Kegiatan DKV</h2>
+          <div class="divider"></div>
+        </div>
+        <div class="galeri-grid">
+          <div class="galeri-card">
+            <div class="galeri-preview">
+              <div class="foto-placeholder"><i class="ti ti-palette"></i><span>Taruh foto pameran</span></div>
+            </div>
+            <div class="galeri-info">
+              <span class="galeri-tag">PAMERAN</span>
+              <div class="galeri-desc">DKV Expo 2024 - Pameran karya desain grafis & ilustrasi</div>
+            </div>
+          </div>
+          <div class="galeri-card">
+            <div class="galeri-preview">
+              <div class="foto-placeholder"><i class="ti ti-device-laptop"></i><span>Taruh foto workshop</span></div>
+            </div>
+            <div class="galeri-info">
+              <span class="galeri-tag">WORKSHOP</span>
+              <div class="galeri-desc">Pelatihan Desain Branding bersama praktisi industri</div>
+            </div>
+          </div>
+          <div class="galeri-card">
+            <div class="galeri-preview">
+              <div class="foto-placeholder"><i class="ti ti-trophy"></i><span>Taruh foto lomba</span></div>
+            </div>
+            <div class="galeri-info">
+              <span class="galeri-tag">LOMBA</span>
+              <div class="galeri-desc">Juara 2 Lomba Poster Digital Tingkat Provinsi 2024</div>
+            </div>
+          </div>
+          <div class="galeri-card">
+            <div class="galeri-preview">
+              <div class="foto-placeholder"><i class="ti ti-camera"></i><span>Taruh foto praktik</span></div>
+            </div>
+            <div class="galeri-info">
+              <span class="galeri-tag">PRAKTIK</span>
+              <div class="galeri-desc">Sesi fotografi produk dan studio branding</div>
+            </div>
+          </div>
+          <div class="galeri-card">
+            <div class="galeri-preview">
+              <div class="foto-placeholder"><i class="ti ti-brush"></i><span>Taruh foto ilustrasi</span></div>
+            </div>
+            <div class="galeri-info">
+              <span class="galeri-tag">KARYA</span>
+              <div class="galeri-desc">Portofolio ilustrasi digital siswa kelas XII</div>
+            </div>
+          </div>
+          <div class="galeri-card">
+            <div class="galeri-preview">
+              <div class="foto-placeholder"><i class="ti ti-building-factory"></i><span>Taruh foto industri</span></div>
+            </div>
+            <div class="galeri-info">
+              <span class="galeri-tag">MITRA INDUSTRI</span>
+              <div class="galeri-desc">Magang di Malang Creative Center & Studio Desain</div>
+            </div>
+          </div>
+        </div>
+        <div class="section-header">
+          <span class="section-eyebrow">Pencapaian</span>
+          <h2>Prestasi DKV SMKN 5 Malang</h2>
+          <div class="divider"></div>
+        </div>
+        <div>
+          <div class="prestasi-item">
+            <div class="prestasi-icon"><i class="ti ti-medal"></i></div>
+            <div>
+              <p style="font-weight: 700; color: #1a6b6b">Juara 2 Desain Poster FLS2N 2024 Tingkat Provinsi</p>
+              <p style="font-size: 12px; color: #5a626e">Siswa DKV, Nayla Kirana, meraih juara 2 dalam ajang Festival Lomba Seni Siswa Nasional (FLS2N) kategori Poster Digital.</p>
+            </div>
+          </div>
+          <div class="prestasi-item">
+            <div class="prestasi-icon"><i class="ti ti-certificate"></i></div>
+            <div>
+              <p style="font-weight: 700; color: #1a6b6b">Sertifikasi BNSP Bidang Desain Grafis Muda</p>
+              <p style="font-size: 12px; color: #5a626e">Lebih dari 30 siswa DKV lolos uji kompetensi profesi desain grafis tingkat BNSP tahun 2025.</p>
+            </div>
+          </div>
+          <div class="prestasi-item">
+            <div class="prestasi-icon"><i class="ti ti-building-factory"></i></div>
+            <div>
+              <p style="font-weight: 700; color: #1a6b6b">Mitra Teaching Factory bersama MCC dan Kontrak Kreatif</p>
+              <p style="font-size: 12px; color: #5a626e">Menghasilkan proyek identitas visual untuk UMKM lokal hasil kolaborasi siswa.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-container">
+        <div class="footer-brand">
+          <h3>DKV SMKN 5 Malang</h3>
+          <p>Desain Komunikasi Visual – membangun imajinasi, mengukir prestasi dalam industri kreatif.</p>
+        </div>
+        <div class="footer-contact">
+          <h4>Hubungi Kami</h4>
+          <ul class="contact-list">
+            <li><i class="ti ti-map-pin"></i> Jl. Ikan Piranha No.50, Tunjungsekar, Malang</li>
+            <li><i class="ti ti-phone"></i> (0341) 478195</li>
+            <li><i class="ti ti-mail"></i> <a href="mailto:info@smkn5malang.sch.id">info@smkn5malang.sch.id</a></li>
+            <li><i class="ti ti-world"></i> <a href="https://www.smkn5malang.sch.id/" target="_blank">www.smkn5malang.sch.id</a></li>
+          </ul>
+        </div>
+        <div class="footer-social">
+          <h4>Ikuti saya</h4>
+          <div class="social-icons">
+            <a href="https://www.instagram.com/smkn5malang/"><i class="ti ti-brand-instagram"></i></a><a href="https://wa.me/+628123456789"><i class="ti ti-brand-whatsapp"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright"><strong>Jurusan Desain Komunikasi Visual</strong> · SMKN 5 Malang · © 2025</div>
+    </footer>
+    <a href="index.html" class="back-home"><i class="ti ti-arrow-left"></i> Kembali ke Beranda</a>
+    <script>
+      function showPage(id, el) {
+        document.querySelectorAll(".page").forEach((p) => p.classList.remove("active"));
+        document.querySelectorAll(".nav-links a").forEach((a) => a.classList.remove("active"));
+        document.getElementById(id).classList.add("active");
+        el.classList.add("active");
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+    </script>
+  </body>
+</html>
